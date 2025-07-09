@@ -1,4 +1,4 @@
-package com.jeff.mosbookings.auth
+package com.jeff.mosbookings.admin.auth
 
 import android.content.Intent
 import android.os.Bundle
@@ -6,18 +6,17 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import com.jeff.mosbookings.Home
 import com.jeff.mosbookings.R
-import com.jeff.mosbookings.databinding.ActivityLoginBinding
+import com.jeff.mosbookings.admin.AdminHome
+import com.jeff.mosbookings.databinding.ActivityAdminHomeBinding
+import com.jeff.mosbookings.databinding.ActivityAdminLoginBinding
 
-class Login : AppCompatActivity() {
-
-    private lateinit var binding: ActivityLoginBinding
-
+class AdminLogin : AppCompatActivity() {
+    private lateinit var binding: ActivityAdminLoginBinding
     override fun onCreate(savedInstanceState: Bundle?) {
-        binding = ActivityLoginBinding.inflate(layoutInflater)
+        binding = ActivityAdminLoginBinding.inflate(layoutInflater)
+        supportActionBar?.hide()
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
         setContentView(binding.root)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
@@ -26,13 +25,10 @@ class Login : AppCompatActivity() {
         }
 
         binding.btnLogin.setOnClickListener {
-            startActivity(Intent(this, Home::class.java))
+            startActivity(Intent(this, AdminHome::class.java))
             finish()
         }
 
-        binding.tvRegister.setOnClickListener {
-            startActivity(Intent(this, Register::class.java))
-            finish()
-        }
+
     }
 }

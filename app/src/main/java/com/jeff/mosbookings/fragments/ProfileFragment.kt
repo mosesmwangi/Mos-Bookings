@@ -1,60 +1,136 @@
 package com.jeff.mosbookings.fragments
 
+import android.Manifest
+import android.content.Intent
+import android.content.pm.PackageManager
+import android.net.Uri
+import android.os.Build
 import android.os.Bundle
-import androidx.fragment.app.Fragment
+import android.provider.MediaStore
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.activity.result.contract.ActivityResultContracts
+import androidx.core.content.ContextCompat
+import androidx.fragment.app.Fragment
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
+import android.graphics.BitmapFactory
+import android.widget.Toast
 import com.jeff.mosbookings.R
+import com.jeff.mosbookings.admin.AdminHome
+import com.jeff.mosbookings.admin.auth.AdminLogin
+import com.jeff.mosbookings.auth.Login
+import com.jeff.mosbookings.databinding.FragmentProfileBinding
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
-/**
- * A simple [Fragment] subclass.
- * Use the [ProfileFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class ProfileFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
+    private var _binding: FragmentProfileBinding? = null
+    private val binding get() = _binding!!
+    private val requestPermissionLauncher =
+        registerForActivityResult(ActivityResultContracts.RequestPermission()) { isGranted ->
+            if (isGranted) {
+                openImagePicker()
+            } else {
+                binding.errorText.visibility = View.VISIBLE
+                binding.errorText.text = "Storage permission denied"
+            }
         }
-    }
+    private val pickImageLauncher =
+        registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
+            result.data?.data?.let { uri ->
+                loadProfilePicture(uri)
+            }
+        }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_profile, container, false)
+    ): View {
+        _binding = FragmentProfileBinding.inflate(inflater, container, false)
+        return binding.root
     }
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment ProfileFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            ProfileFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        loadDummyProfile()
+
+        binding.editProfileImage.setOnClickListener {
+            requestStoragePermission()
+        }
+
+        binding.adminButton.setOnClickListener {
+            val intent = Intent(requireActivity(), AdminLogin::class.java)
+            startActivity(intent)
+            requireActivity().finish()
+        }
+
+        binding.logoutButton.setOnClickListener {
+            val intent = Intent(requireActivity(), Login::class.java)
+            startActivity(intent)
+        }
+    }
+
+    private fun loadDummyProfile() {
+        // Dummy user data
+        binding.userName.text = "John Doe"
+        binding.userEmail.text = "john.doe@example.com"
+        binding.userPhone.text = "+1234567890"
+        binding.userLocation.text = "New York, NY"
+        binding.profileImage.setImageResource(R.drawable.ic_user) // Default profile picture
+    }
+
+    private fun requestStoragePermission() {
+        val permission = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+            Manifest.permission.READ_MEDIA_IMAGES
+        } else {
+            Manifest.permission.READ_EXTERNAL_STORAGE
+        }
+        if (ContextCompat.checkSelfPermission(
+                requireContext(),
+                permission
+            ) == PackageManager.PERMISSION_GRANTED
+        ) {
+            openImagePicker()
+        } else {
+            requestPermissionLauncher.launch(permission)
+        }
+    }
+
+    private fun openImagePicker() {
+        val intent = Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI)
+        pickImageLauncher.launch(intent)
+    }
+
+    private fun loadProfilePicture(uri: Uri) {
+        CoroutineScope(Dispatchers.IO).launch {
+            try {
+                val inputStream = requireContext().contentResolver.openInputStream(uri)
+                inputStream?.use { stream ->
+                    val imageBytes = stream.readBytes()
+                    withContext(Dispatchers.Main) {
+                        binding.profileImage.setImageBitmap(
+                            BitmapFactory.decodeByteArray(
+                                imageBytes,
+                                0,
+                                imageBytes.size
+                            )
+                        )
+                        binding.errorText.visibility = View.GONE
+                    }
+                }
+            } catch (e: Exception) {
+                withContext(Dispatchers.Main) {
+                    binding.errorText.visibility = View.VISIBLE
+                    binding.errorText.text = "Failed to load image: ${e.message}"
                 }
             }
+        }
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
     }
 }

@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragments.BookingsFragment">
+    tools:context=".admin.fragment.AvailableFragment">
 
     <LinearLayout
         xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -47,7 +47,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Moses"
+                        android:text="ADMIN"
                         android:textSize="20sp"
                         android:textStyle="bold" />
 
@@ -59,8 +59,6 @@
 
                 </LinearLayout>
 
-
-
             </LinearLayout>
 
         </com.google.android.material.card.MaterialCardView>
@@ -69,7 +67,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textStyle="bold"
-            android:text="BOOKED ROOMS"
+            android:text="ALL ROOMS"
             android:textAppearance="@style/TextAppearance.AppCompat.Title"
             android:layout_marginTop="10dp"
             android:layout_marginHorizontal="10dp" />
@@ -131,6 +129,5 @@
             tools:listitem="@layout/room_item" />
 
     </LinearLayout>
-
 
 </FrameLayout>

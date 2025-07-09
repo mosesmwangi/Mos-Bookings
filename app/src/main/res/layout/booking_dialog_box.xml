@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp"
+    >
+
+    <!-- Check-in Date -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/checkinDateLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        app:endIconMode="custom"
+        app:endIconDrawable="@drawable/ic_calendar"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/checkinDateInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Check-in Date"
+            android:textSize="16sp"
+            android:inputType="date"
+            android:enabled="false"
+            android:focusable="false" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Check-in Time -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/checkinTimeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        app:endIconMode="custom"
+        app:endIconDrawable="@drawable/ic_clock"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/checkinTimeInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Check-in Time"
+            android:textSize="16sp"
+            android:inputType="time"
+            android:enabled="false"
+            android:focusable="false" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Check-out Date -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/checkoutDateLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        app:endIconMode="custom"
+        app:endIconDrawable="@drawable/ic_calendar"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/checkoutDateInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Check-out Date"
+            android:textSize="16sp"
+            android:inputType="date"
+            android:enabled="false"
+            android:focusable="false" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Check-out Time -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/checkoutTimeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        app:endIconMode="custom"
+        app:endIconDrawable="@drawable/ic_clock"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/checkoutTimeInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Check-out Time"
+            android:textSize="16sp"
+            android:inputType="time"
+            android:enabled="false"
+            android:focusable="false" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Duration -->
+    <TextView
+        android:id="@+id/durationText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Duration: N/A"
+        android:textSize="16sp"
+        android:textColor="@android:color/black"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Book Room Button -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/bookRoomButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Book Room"
+        android:textColor="@android:color/white"
+        app:backgroundTint="#6200EE"
+        style="@style/Widget.MaterialComponents.Button" />
+
+</LinearLayout>

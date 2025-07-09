@@ -12,14 +12,13 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.jeff.mosbookings.adapters.RoomsAdapter
 import com.jeff.mosbookings.databinding.FragmentHomeBinding
 import com.jeff.mosbookings.models.RoomData
+import com.jeff.mosbookings.models.SharedData
 import com.jeff.mosbookings.screens.RoomDetails
-
 
 class HomeFragment : Fragment() {
 
     private lateinit var binding: FragmentHomeBinding
     private lateinit var roomsAdapter: RoomsAdapter
-    private lateinit var roomsList: ArrayList<RoomData>
     private lateinit var filteredList: ArrayList<RoomData>
 
     override fun onCreateView(
@@ -36,52 +35,52 @@ class HomeFragment : Fragment() {
     }
 
     private fun setupRoomData() {
-        roomsList = arrayListOf(
-            RoomData(
-                roomImage = "https://images.unsplash.com/photo-1505691723518-36a5ac3be353",
-                roomName = "Banana Suite",
-                roomLocation = "Nairobi",
-                roomPrice = "3000",
-                roomAvailability = true,
-                roomDescription = "Spacious room with king bed and city view",
-                checkinTime = "12:00 PM",
-                checkOutTime = "10:00 AM",
-                checkinDate = "2025-08-01",
-                checkoutDate = "2025-08-02"
-            ),
-            RoomData(
-                roomImage = "https://images.unsplash.com/photo-1570129477492-45c003edd2be",
-                roomName = "Mango Deluxe",
-                roomLocation = "Mombasa",
-                roomPrice = "2500",
-                roomAvailability = false,
-                roomDescription = "Cozy beachside room",
-                checkinTime = "1:00 PM",
-                checkOutTime = "11:00 AM",
-                checkinDate = "2025-08-03",
-                checkoutDate = "2025-08-04"
-            )
-        )
-
-        filteredList = ArrayList(roomsList)
+        filteredList = ArrayList(SharedData.roomsList)
     }
 
     private fun setupRecyclerView() {
-        roomsAdapter = RoomsAdapter(filteredList) { room ->
-            val intent = Intent(requireContext(), RoomDetails::class.java).apply {
-                putExtra("roomImage", room.roomImage)
-                putExtra("roomName", room.roomName)
-                putExtra("roomLocation", room.roomLocation)
-                putExtra("roomPrice", room.roomPrice)
-                putExtra("roomAvailability", room.roomAvailability)
-                putExtra("roomDescription", room.roomDescription)
-                putExtra("checkinTime", room.checkinTime)
-                putExtra("checkOutTime", room.checkOutTime)
-                putExtra("checkinDate", room.checkinDate)
-                putExtra("checkoutDate", room.checkoutDate)
+        roomsAdapter = RoomsAdapter(
+            filteredList,
+            onRoomClick = { room ->
+                val intent = Intent(requireContext(), RoomDetails::class.java).apply {
+                    putExtra("roomImage", room.roomImage)
+                    putExtra("roomName", room.roomName)
+                    putExtra("roomLocation", room.roomLocation)
+                    putExtra("roomPrice", room.roomPrice)
+                    putExtra("roomAvailability", room.roomAvailability)
+                    putExtra("roomDescription", room.roomDescription)
+                    putExtra("checkinTime", room.checkinTime)
+                    putExtra("checkOutTime", room.checkOutTime)
+                    putExtra("checkinDate", room.checkinDate)
+                    putExtra("checkoutDate", room.checkoutDate)
+                }
+                startActivity(intent)
+            },
+            onBookRoom = { room, newCheckinDate, newCheckinTime, newCheckoutDate, newCheckoutTime ->
+                val index = SharedData.roomsList.indexOfFirst { it.roomName == room.roomName }
+                if (index != -1) {
+                    SharedData.roomsList[index] = room.copy(
+                        roomAvailability = false,
+                        checkinDate = newCheckinDate,
+                        checkinTime = newCheckinTime,
+                        checkoutDate = newCheckoutDate,
+                        checkOutTime = newCheckoutTime
+                    )
+                    filteredList.clear()
+                    filteredList.addAll(SharedData.roomsList)
+                    roomsAdapter.notifyItemChanged(index)
+                }
+            },
+            onCancelBooking = { room ->
+                val index = SharedData.roomsList.indexOfFirst { it.roomName == room.roomName }
+                if (index != -1) {
+                    SharedData.roomsList[index] = room.copy(roomAvailability = true)
+                    filteredList.clear()
+                    filteredList.addAll(SharedData.roomsList)
+                    roomsAdapter.notifyItemChanged(index)
+                }
             }
-            startActivity(intent)
-        }
+        )
 
         binding.roomsRecyclerView.apply {
             layoutManager = LinearLayoutManager(requireContext())
@@ -96,7 +95,7 @@ class HomeFragment : Fragment() {
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
                 val query = s.toString().lowercase()
                 filteredList.clear()
-                filteredList.addAll(roomsList.filter {
+                filteredList.addAll(SharedData.roomsList.filter {
                     it.roomName.lowercase().contains(query) ||
                             it.roomLocation.lowercase().contains(query)
                 })

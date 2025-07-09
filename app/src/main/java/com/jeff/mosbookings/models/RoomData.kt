@@ -1,7 +1,7 @@
 package com.jeff.mosbookings.models
 
 data class RoomData(
-    val roomImage: String,
+    val roomImage: String?,
     val roomName: String,
     val roomLocation: String,
     val roomPrice: String,

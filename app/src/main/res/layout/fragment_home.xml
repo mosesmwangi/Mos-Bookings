@@ -6,9 +6,7 @@
     tools:context=".fragments.HomeFragment">
 
     <LinearLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
         android:id="@+id/main"
         android:orientation="vertical"
         android:layout_width="match_parent"
@@ -60,14 +58,6 @@
                     <!--                    android:textSize="16sp" />-->
 
                 </LinearLayout>
-
-                <ImageView
-                    android:id="@+id/menuDots"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:src="@drawable/dots"
-                    android:contentDescription="Menu"
-                    android:layout_gravity="center_vertical" />
 
             </LinearLayout>
 

@@ -1,4 +1,4 @@
-package com.jeff.mosbookings
+package com.jeff.mosbookings.admin
 
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
@@ -6,36 +6,35 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.fragment.app.Fragment
-import com.jeff.mosbookings.databinding.ActivityHomeBinding
+import com.jeff.mosbookings.R
+import com.jeff.mosbookings.admin.fragment.AvailableFragment
+import com.jeff.mosbookings.admin.fragment.UploadFragment
+import com.jeff.mosbookings.databinding.ActivityAdminHomeBinding
 import com.jeff.mosbookings.fragments.BookingsFragment
 import com.jeff.mosbookings.fragments.HomeFragment
 import com.jeff.mosbookings.fragments.MyBookingsFragment
 import com.jeff.mosbookings.fragments.ProfileFragment
 
-class Home : AppCompatActivity() {
-
-    private lateinit var binding: ActivityHomeBinding
-
+class AdminHome : AppCompatActivity() {
+    private lateinit var binding: ActivityAdminHomeBinding
     override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        binding = ActivityHomeBinding.inflate(layoutInflater)
+        binding = ActivityAdminHomeBinding.inflate(layoutInflater)
         supportActionBar?.hide()
+        super.onCreate(savedInstanceState)
         setContentView(binding.root)
-
-        ViewCompat.setOnApplyWindowInsetsListener(binding.root) { view, insets ->
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            view.setPadding(0, systemBars.top, 0, systemBars.bottom)
+            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-
-        replaceFragment(HomeFragment())
+        replaceFragment(AvailableFragment())
 
         binding.bottomNavigationView.setOnItemSelectedListener {
             when (it.itemId) {
-                R.id.icHome -> replaceFragment(HomeFragment())
+                R.id.icHome -> replaceFragment(AvailableFragment())
                 R.id.icBookings -> replaceFragment(BookingsFragment())
-                R.id.myBookings -> replaceFragment(MyBookingsFragment())
-                R.id.profile -> replaceFragment(ProfileFragment())
+                R.id.myBookings -> replaceFragment(UploadFragment())
+
 
                 else -> {
                 }

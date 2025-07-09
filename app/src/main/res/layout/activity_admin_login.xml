@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".auth.Login">
+    tools:context=".admin.auth.AdminLogin">
 
 
     <LinearLayout
@@ -32,13 +32,12 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Mos Bookings"
+                    android:text="Mos Bookings ADMIN"
                     android:textAlignment="center"
                     android:textAllCaps="true"
                     android:textAppearance="@style/TextAppearance.AppCompat.Title"
                     android:textSize="30sp"
-                    android:textStyle="bold"
-                    />
+                    android:textStyle="bold" />
 
                 <TextView
                     android:layout_width="match_parent"
@@ -98,66 +97,39 @@
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="10dp"
                     android:layout_marginTop="16dp"
+                    app:cardBackgroundColor="@android:color/white"
                     app:cardCornerRadius="4dp"
                     app:cardElevation="2dp"
                     app:strokeColor="#0C57A6"
-                    app:strokeWidth="1dp"
-                    app:cardBackgroundColor="@android:color/white">
+                    app:strokeWidth="1dp">
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center"
                         android:orientation="horizontal"
-                        android:paddingVertical="12dp"
-                        android:paddingHorizontal="16dp">
+                        android:paddingHorizontal="16dp"
+                        android:paddingVertical="12dp">
 
                         <ProgressBar
                             android:id="@+id/progressBar"
                             android:layout_width="24dp"
                             android:layout_height="24dp"
-                            android:visibility="gone"
                             android:layout_marginEnd="8dp"
-                            android:indeterminate="true" />
+                            android:indeterminate="true"
+                            android:visibility="gone" />
 
                         <TextView
                             android:id="@+id/btnText"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Login"
-                            android:textSize="16sp"
-                            android:textColor="@android:color/black" />
+                            android:textColor="@android:color/black"
+                            android:textSize="16sp" />
 
                     </LinearLayout>
 
                 </com.google.android.material.card.MaterialCardView>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:orientation="horizontal"
-                    android:layout_marginTop="10dp"
-                    android:gravity="center"
-                    android:layout_height="wrap_content">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Do Not Have an account?"
-                        />
-                    <TextView
-                        android:id="@+id/tvRegister"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Register"
-                        android:layout_marginStart="10dp"
-                        android:textStyle="bold"
-                        android:textColor="#2196F3"
-                        />
-
-                </LinearLayout>
-
-
-
 
             </LinearLayout>
 

@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".admin.fragment.UploadFragment">
+
+    <ScrollView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Room Image Preview -->
+            <ImageView
+                android:id="@+id/roomImagePreview"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/placeholder_room"
+                android:contentDescription="Room Image Preview"
+                android:layout_marginBottom="8dp" />
+
+            <!-- Pick Image Button -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/pickImageButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:text="Pick Image from Gallery"
+                android:textColor="@android:color/white"
+                app:backgroundTint="#6200EE"
+                style="@style/Widget.MaterialComponents.Button" />
+
+            <!-- Room Name -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/roomNameLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                app:hintTextAppearance="@style/TextAppearance.AppCompat.Small">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/roomNameInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Room Name"
+                    android:inputType="text"
+                    android:textSize="16sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Room Location -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/roomLocationLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                app:hintTextAppearance="@style/TextAppearance.AppCompat.Small">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/roomLocationInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Room Location"
+                    android:inputType="text"
+                    android:textSize="16sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Room Price -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/roomPriceLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                app:hintTextAppearance="@style/TextAppearance.AppCompat.Small">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/roomPriceInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Room Price (Ksh)"
+                    android:inputType="numberDecimal"
+                    android:textSize="16sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Room Description -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/roomDescriptionLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                app:hintTextAppearance="@style/TextAppearance.AppCompat.Small">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/roomDescriptionInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Room Description"
+                    android:inputType="textMultiLine"
+                    android:minLines="3"
+                    android:textSize="16sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Room Availability -->
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:id="@+id/roomAvailabilityInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="Room Available"
+                android:checked="true"
+                android:textSize="16sp" />
+
+            <!-- Check-in Date -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/checkinDateLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                app:endIconMode="custom"
+                app:endIconDrawable="@drawable/ic_calendar"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                app:hintTextAppearance="@style/TextAppearance.AppCompat.Small">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/checkinDateInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Check-in Date"
+                    android:textSize="16sp"
+                    android:inputType="date"
+                    android:enabled="false"
+                    android:focusable="false" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Check-in Time -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/checkinTimeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                app:endIconMode="custom"
+                app:endIconDrawable="@drawable/ic_clock"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                app:hintTextAppearance="@style/TextAppearance.AppCompat.Small">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/checkinTimeInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Check-in Time"
+                    android:textSize="16sp"
+                    android:inputType="time"
+                    android:enabled="false"
+                    android:focusable="false" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Check-out Date -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/checkoutDateLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                app:endIconMode="custom"
+                app:endIconDrawable="@drawable/ic_calendar"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                app:hintTextAppearance="@style/TextAppearance.AppCompat.Small">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/checkoutDateInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Check-out Date"
+                    android:textSize="16sp"
+                    android:inputType="date"
+                    android:enabled="false"
+                    android:focusable="false" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Check-out Time -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/checkoutTimeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:endIconMode="custom"
+                app:endIconDrawable="@drawable/ic_clock"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                app:hintTextAppearance="@style/TextAppearance.AppCompat.Small">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/checkoutTimeInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Check-out Time"
+                    android:textSize="16sp"
+                    android:inputType="time"
+                    android:enabled="false"
+                    android:focusable="false" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Upload Room Button -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/uploadRoomButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Upload Room"
+                android:textColor="@android:color/white"
+                app:backgroundTint="#6200EE"
+                style="@style/Widget.MaterialComponents.Button" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</FrameLayout>
