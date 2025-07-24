@@ -1,30 +1,50 @@
 package com.jeff.mosbookings.models
 
+data class BookingData(
+    val roomId: String,
+    val roomName: String,
+    val date: String,
+    val user: String // For now, can be a dummy user or device id
+)
+
 object SharedData {
     val roomsList = arrayListOf(
         RoomData(
-            roomImage = null,
-            roomName = "Banana Suite",
-            roomLocation = "Nairobi",
-            roomPrice = "3000",
-            roomAvailability = true,
-            roomDescription = "Spacious room with king bed and city view",
-            checkinTime = "12:00 PM",
-            checkOutTime = "10:00 AM",
-            checkinDate = "2025-08-01",
-            checkoutDate = "2025-08-02"
+            id = "1",
+            images = listOf("android.resource://com.jeff.mosbookings/drawable/hotel", "android.resource://com.jeff.mosbookings/drawable/room1"),
+            roomName = "Deluxe Suite",
+            roomType = "Suite",
+            roomLocation = "Nairobi, CBD",
+            price = 12000.0,
+            amenities = listOf("WiFi", "TV", "AC", "Breakfast"),
+            rating = 4.8f,
+            description = "Spacious suite with city view, king bed, and modern amenities.",
+            unavailableDates = listOf("2024-07-10", "2024-07-11", "2024-07-15")
         ),
         RoomData(
-            roomImage = null,
-            roomName = "Mango Deluxe",
-            roomLocation = "Mombasa",
-            roomPrice = "2500",
-            roomAvailability = false,
-            roomDescription = "Cozy beachside room",
-            checkinTime = "1:00 PM",
-            checkOutTime = "11:00 AM",
-            checkinDate = "2025-08-03",
-            checkoutDate = "2025-08-04"
+            id = "2",
+            images = listOf("android.resource://com.jeff.mosbookings/drawable/hotel", "android.resource://com.jeff.mosbookings/drawable/room2"),
+            roomName = "Standard Room",
+            roomType = "Single",
+            roomLocation = "Nairobi, Westlands",
+            price = 7000.0,
+            amenities = listOf("WiFi", "TV"),
+            rating = 4.2f,
+            description = "Comfortable single room ideal for business travelers.",
+            unavailableDates = listOf("2024-07-12", "2024-07-13")
+        ),
+        RoomData(
+            id = "3",
+            images = listOf("android.resource://com.jeff.mosbookings/drawable/hotel", "android.resource://com.jeff.mosbookings/drawable/room3"),
+            roomName = "Family Room",
+            roomType = "Double",
+            roomLocation = "Nairobi, Kilimani",
+            price = 9500.0,
+            amenities = listOf("WiFi", "TV", "AC", "Kitchenette"),
+            rating = 4.5f,
+            description = "Spacious room for families, includes kitchenette and two double beds.",
+            unavailableDates = listOf("2024-07-14")
         )
     )
+    val bookingsList = arrayListOf<BookingData>()
 }

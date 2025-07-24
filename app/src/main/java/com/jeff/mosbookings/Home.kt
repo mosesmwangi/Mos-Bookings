@@ -7,7 +7,6 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.fragment.app.Fragment
 import com.jeff.mosbookings.databinding.ActivityHomeBinding
-import com.jeff.mosbookings.fragments.BookingsFragment
 import com.jeff.mosbookings.fragments.HomeFragment
 import com.jeff.mosbookings.fragments.MyBookingsFragment
 import com.jeff.mosbookings.fragments.ProfileFragment
@@ -33,10 +32,8 @@ class Home : AppCompatActivity() {
         binding.bottomNavigationView.setOnItemSelectedListener {
             when (it.itemId) {
                 R.id.icHome -> replaceFragment(HomeFragment())
-                R.id.icBookings -> replaceFragment(BookingsFragment())
                 R.id.myBookings -> replaceFragment(MyBookingsFragment())
                 R.id.profile -> replaceFragment(ProfileFragment())
-
                 else -> {
                 }
             }

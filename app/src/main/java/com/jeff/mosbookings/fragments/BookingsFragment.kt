@@ -14,6 +14,8 @@ import com.jeff.mosbookings.databinding.FragmentBookingsBinding
 import com.jeff.mosbookings.models.RoomData
 import com.jeff.mosbookings.models.SharedData
 import com.jeff.mosbookings.screens.RoomDetails
+import java.time.LocalDate
+import java.time.format.DateTimeFormatter
 
 class BookingsFragment : Fragment() {
 
@@ -35,7 +37,8 @@ class BookingsFragment : Fragment() {
     }
 
     private fun setupRoomData() {
-        filteredList = ArrayList(SharedData.roomsList.filter { !it.roomAvailability })
+        val today = LocalDate.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd"))
+        filteredList = ArrayList(SharedData.roomsList.filter { it.unavailableDates.contains(today) })
     }
 
     private fun setupRecyclerView() {
@@ -43,42 +46,9 @@ class BookingsFragment : Fragment() {
             filteredList,
             onRoomClick = { room ->
                 val intent = Intent(requireContext(), RoomDetails::class.java).apply {
-                    putExtra("roomImage", room.roomImage)
-                    putExtra("roomName", room.roomName)
-                    putExtra("roomLocation", room.roomLocation)
-                    putExtra("roomPrice", room.roomPrice)
-                    putExtra("roomAvailability", room.roomAvailability)
-                    putExtra("roomDescription", room.roomDescription)
-                    putExtra("checkinTime", room.checkinTime)
-                    putExtra("checkOutTime", room.checkOutTime)
-                    putExtra("checkinDate", room.checkinDate)
-                    putExtra("checkoutDate", room.checkoutDate)
+                    putExtra("roomId", room.id)
                 }
                 startActivity(intent)
-            },
-            onBookRoom = { room, newCheckinDate, newCheckinTime, newCheckoutDate, newCheckoutTime ->
-                val index = SharedData.roomsList.indexOfFirst { it.roomName == room.roomName }
-                if (index != -1) {
-                    SharedData.roomsList[index] = room.copy(
-                        roomAvailability = false,
-                        checkinDate = newCheckinDate,
-                        checkinTime = newCheckinTime,
-                        checkoutDate = newCheckoutDate,
-                        checkOutTime = newCheckoutTime
-                    )
-                    filteredList.clear()
-                    filteredList.addAll(SharedData.roomsList.filter { !it.roomAvailability })
-                    roomsAdapter.notifyDataSetChanged()
-                }
-            },
-            onCancelBooking = { room ->
-                val index = SharedData.roomsList.indexOfFirst { it.roomName == room.roomName }
-                if (index != -1) {
-                    SharedData.roomsList[index] = room.copy(roomAvailability = true)
-                    filteredList.clear()
-                    filteredList.addAll(SharedData.roomsList.filter { !it.roomAvailability })
-                    roomsAdapter.notifyDataSetChanged()
-                }
             }
         )
 
@@ -94,12 +64,13 @@ class BookingsFragment : Fragment() {
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) = Unit
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
                 val query = s.toString().lowercase()
+                val today = LocalDate.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd"))
                 filteredList.clear()
                 filteredList.addAll(SharedData.roomsList.filter {
-                    !it.roomAvailability && (
-                            it.roomName.lowercase().contains(query) ||
-                                    it.roomLocation.lowercase().contains(query)
-                            )
+                    it.unavailableDates.contains(today) && (
+                        it.roomName.lowercase().contains(query) ||
+                        it.roomLocation.lowercase().contains(query)
+                    )
                 })
                 roomsAdapter.notifyDataSetChanged()
             }

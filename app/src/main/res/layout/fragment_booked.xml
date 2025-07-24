@@ -51,15 +51,7 @@
                         android:textSize="20sp"
                         android:textStyle="bold" />
 
-                    <!--                <TextView-->
-                    <!--                    android:layout_width="wrap_content"-->
-                    <!--                    android:layout_height="wrap_content"-->
-                    <!--                    android:text="Field Agent 1"-->
-                    <!--                    android:textSize="16sp" />-->
-
                 </LinearLayout>
-
-
 
             </LinearLayout>
 
@@ -106,7 +98,7 @@
                     android:layout_weight="1"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
-                    android:hint="Search room..."
+                    android:hint="Search bookings..."
                     android:background="@null"
                     android:textSize="16sp"
                     android:imeOptions="actionSearch"
@@ -117,18 +109,64 @@
 
         </com.google.android.material.card.MaterialCardView>
 
-        <ProgressBar
-            android:id="@+id/loadingProgressBar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:visibility="gone" />
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/roomsRecyclerView"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            tools:listitem="@layout/room_item" />
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="8dp">
+
+            <EditText
+                android:id="@+id/startDateEditText"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:hint="Start Date"
+                android:inputType="date"
+                android:focusable="false"
+                android:clickable="true"
+                android:layout_marginEnd="8dp" />
+
+            <EditText
+                android:id="@+id/endDateEditText"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:hint="End Date"
+                android:inputType="date"
+                android:focusable="false"
+                android:clickable="true"
+                android:layout_marginEnd="8dp" />
+
+            <Button
+                android:id="@+id/filterButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Filter" />
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginTop="8dp">
+
+            <ProgressBar
+                android:id="@+id/loadingProgressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:visibility="visible" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/roomsRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone"
+                tools:listitem="@layout/item_admin_booking" />
+
+        </FrameLayout>
 
     </LinearLayout>
 

@@ -39,6 +39,24 @@
                 android:textStyle="bold" />
 
             <TextView
+                android:id="@+id/roomType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Suite"
+                android:textSize="14sp"
+                android:textColor="@android:color/darker_gray"
+                android:layout_marginTop="2dp" />
+
+            <TextView
+                android:id="@+id/roomRating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="★ 4.8"
+                android:textSize="14sp"
+                android:textColor="@android:color/holo_orange_dark"
+                android:layout_marginTop="2dp" />
+
+            <TextView
                 android:id="@+id/roomLocation"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -56,6 +74,15 @@
                 android:textStyle="bold" />
 
             <TextView
+                android:id="@+id/roomAmenities"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="WiFi, TV, AC"
+                android:textSize="13sp"
+                android:textColor="@android:color/darker_gray"
+                android:layout_marginTop="2dp" />
+
+            <TextView
                 android:id="@+id/roomStatus"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -67,14 +94,5 @@
 
         </LinearLayout>
 
-        <!-- RIGHT: Book Button -->
-        <Button
-            android:id="@+id/bookButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Book Now"
-            android:backgroundTint="@android:color/holo_blue_dark"
-            android:textColor="@android:color/white"
-            android:layout_gravity="center_vertical" />
     </LinearLayout>
 </androidx.cardview.widget.CardView>

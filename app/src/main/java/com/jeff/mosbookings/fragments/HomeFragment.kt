@@ -1,106 +1,68 @@
 package com.jeff.mosbookings.fragments
 
-import android.content.Intent
 import android.os.Bundle
-import android.text.Editable
-import android.text.TextWatcher
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.jeff.mosbookings.adapters.RoomsAdapter
 import com.jeff.mosbookings.databinding.FragmentHomeBinding
 import com.jeff.mosbookings.models.RoomData
-import com.jeff.mosbookings.models.SharedData
+import com.jeff.mosbookings.repository.RoomRepository
 import com.jeff.mosbookings.screens.RoomDetails
+import kotlinx.coroutines.launch
 
 class HomeFragment : Fragment() {
 
     private lateinit var binding: FragmentHomeBinding
     private lateinit var roomsAdapter: RoomsAdapter
-    private lateinit var filteredList: ArrayList<RoomData>
+    private lateinit var roomList: ArrayList<RoomData>
+    private val roomRepository = RoomRepository()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
         binding = FragmentHomeBinding.inflate(inflater, container, false)
-
-        setupRoomData()
         setupRecyclerView()
-        setupSearch()
-
+        fetchRooms()
         return binding.root
     }
 
-    private fun setupRoomData() {
-        filteredList = ArrayList(SharedData.roomsList)
+    private fun fetchRooms() {
+        binding.loadingProgressBar.visibility = View.VISIBLE
+        lifecycleScope.launch {
+            val rooms = roomRepository.getRooms()
+            if (rooms != null) {
+                roomList.clear()
+                roomList.addAll(rooms)
+                roomsAdapter.notifyDataSetChanged()
+            } else {
+                Toast.makeText(requireContext(), "Failed to fetch rooms", Toast.LENGTH_SHORT).show()
+            }
+            binding.loadingProgressBar.visibility = View.GONE
+        }
     }
 
     private fun setupRecyclerView() {
+        roomList = ArrayList()
         roomsAdapter = RoomsAdapter(
-            filteredList,
+            roomList,
             onRoomClick = { room ->
-                val intent = Intent(requireContext(), RoomDetails::class.java).apply {
-                    putExtra("roomImage", room.roomImage)
-                    putExtra("roomName", room.roomName)
-                    putExtra("roomLocation", room.roomLocation)
-                    putExtra("roomPrice", room.roomPrice)
-                    putExtra("roomAvailability", room.roomAvailability)
-                    putExtra("roomDescription", room.roomDescription)
-                    putExtra("checkinTime", room.checkinTime)
-                    putExtra("checkOutTime", room.checkOutTime)
-                    putExtra("checkinDate", room.checkinDate)
-                    putExtra("checkoutDate", room.checkoutDate)
+                Toast.makeText(requireContext(), "Clicked: ${room.roomName}", Toast.LENGTH_SHORT).show()
+                Toast.makeText(requireContext(), "Sending roomId: ${room.id}", Toast.LENGTH_SHORT).show()
+                val intent = android.content.Intent(requireContext(), RoomDetails::class.java).apply {
+                    putExtra("roomId", room.id)
                 }
                 startActivity(intent)
-            },
-            onBookRoom = { room, newCheckinDate, newCheckinTime, newCheckoutDate, newCheckoutTime ->
-                val index = SharedData.roomsList.indexOfFirst { it.roomName == room.roomName }
-                if (index != -1) {
-                    SharedData.roomsList[index] = room.copy(
-                        roomAvailability = false,
-                        checkinDate = newCheckinDate,
-                        checkinTime = newCheckinTime,
-                        checkoutDate = newCheckoutDate,
-                        checkOutTime = newCheckoutTime
-                    )
-                    filteredList.clear()
-                    filteredList.addAll(SharedData.roomsList)
-                    roomsAdapter.notifyItemChanged(index)
-                }
-            },
-            onCancelBooking = { room ->
-                val index = SharedData.roomsList.indexOfFirst { it.roomName == room.roomName }
-                if (index != -1) {
-                    SharedData.roomsList[index] = room.copy(roomAvailability = true)
-                    filteredList.clear()
-                    filteredList.addAll(SharedData.roomsList)
-                    roomsAdapter.notifyItemChanged(index)
-                }
             }
         )
-
         binding.roomsRecyclerView.apply {
             layoutManager = LinearLayoutManager(requireContext())
             adapter = roomsAdapter
         }
-    }
-
-    private fun setupSearch() {
-        binding.searchEditText.addTextChangedListener(object : TextWatcher {
-            override fun afterTextChanged(s: Editable?) = Unit
-            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) = Unit
-            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
-                val query = s.toString().lowercase()
-                filteredList.clear()
-                filteredList.addAll(SharedData.roomsList.filter {
-                    it.roomName.lowercase().contains(query) ||
-                            it.roomLocation.lowercase().contains(query)
-                })
-                roomsAdapter.notifyDataSetChanged()
-            }
-        })
     }
 }

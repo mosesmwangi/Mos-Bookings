@@ -1,0 +1,823 @@
+Executing tasks: [:app:assembleDebug] in project C:\Users\ndira\AndroidStudioProjects\MosBookings
+
+> Task :app:preBuild UP-TO-DATE
+> Task :app:preDebugBuild UP-TO-DATE
+> Task :app:mergeDebugNativeDebugMetadata NO-SOURCE
+> Task :app:checkKotlinGradlePluginConfigurationErrors
+> Task :app:dataBindingMergeDependencyArtifactsDebug
+> Task :app:generateDebugResValues
+> Task :app:generateDebugResources
+> Task :app:packageDebugResources
+> Task :app:parseDebugLocalResources
+> Task :app:checkDebugAarMetadata
+> Task :app:mapDebugSourceSetPaths
+> Task :app:createDebugCompatibleScreenManifests
+> Task :app:extractDeepLinksDebug
+> Task :app:processDebugMainManifest
+> Task :app:processDebugManifest
+> Task :app:mergeDebugResources
+> Task :app:mergeDebugShaders
+> Task :app:javaPreCompileDebug
+> Task :app:dataBindingGenBaseClassesDebug
+> Task :app:compileDebugShaders NO-SOURCE
+> Task :app:generateDebugAssets UP-TO-DATE
+> Task :app:mergeDebugAssets
+> Task :app:compressDebugAssets
+> Task :app:desugarDebugFileDependencies
+> Task :app:mergeDebugJniLibFolders
+> Task :app:checkDebugDuplicateClasses
+> Task :app:mergeDebugNativeLibs NO-SOURCE
+> Task :app:stripDebugDebugSymbols NO-SOURCE
+> Task :app:validateSigningDebug
+> Task :app:mergeLibDexDebug
+> Task :app:writeDebugAppMetadata
+> Task :app:writeDebugSigningConfigVersions
+> Task :app:processDebugManifestForPackage
+> Task :app:processDebugResources
+> Task :app:mergeExtDexDebug
+
+> Task :app:kaptGenerateStubsDebugKotlin
+e: file:///C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/META-INF/kotlin-stdlib-jdk7.kotlin_moduleModule was compiled with an incompatible version of Kotlin. The binary version of its metadata is 2.1.0, expected version is 1.9.0.
+e: file:///C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/META-INF/kotlin-stdlib-jdk8.kotlin_moduleModule was compiled with an incompatible version of Kotlin. The binary version of its metadata is 2.1.0, expected version is 1.9.0.
+e: file:///C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/META-INF/kotlin-stdlib.kotlin_moduleModule was compiled with an incompatible version of Kotlin. The binary version of its metadata is 2.1.0, expected version is 1.9.0.
+
+> Task :app:kaptDebugKotlin
+
+> Task :app:compileDebugKotlin FAILED
+e: Incompatible classes were found in dependencies. Remove them from the classpath or use '-Xskip-metadata-version-check' to suppress errors
+e: file:///C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/META-INF/kotlin-stdlib-jdk7.kotlin_moduleModule was compiled with an incompatible version of Kotlin. The binary version of its metadata is 2.1.0, expected version is 1.9.0.
+e: file:///C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/META-INF/kotlin-stdlib-jdk8.kotlin_moduleModule was compiled with an incompatible version of Kotlin. The binary version of its metadata is 2.1.0, expected version is 1.9.0.
+e: file:///C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/META-INF/kotlin-stdlib.kotlin_moduleModule was compiled with an incompatible version of Kotlin. The binary version of its metadata is 2.1.0, expected version is 1.9.0.
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/Home.kt:20:15 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/Home.kt:21:9 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/Home.kt:22:27 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/Home.kt:23:9 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/Home.kt:25:20 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/Home.kt:27:18 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/Home.kt:31:9 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/Home.kt:33:38 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/Home.kt:34:13 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/Home.kt:35:32 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/Home.kt:36:36 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/Home.kt:37:36 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/Home.kt:38:33 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/MainActivity.kt:15:15 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/MainActivity.kt:16:9 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/MainActivity.kt:17:9 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/MainActivity.kt:20:52 Unresolved reference: java
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/MainActivity.kt:21:13 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/MainActivity.kt:22:13 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/adapters/RoomsAdapter.kt:14:28 Unresolved reference: ArrayList
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/adapters/RoomsAdapter.kt:15:44 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/adapters/RoomsAdapter.kt:21:21 Unresolved reference: apply
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/adapters/RoomsAdapter.kt:23:28 Unresolved reference: roomImage
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/adapters/RoomsAdapter.kt:24:39 Unresolved reference: firstOrNull
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/adapters/RoomsAdapter.kt:26:27 Unresolved reference: roomImage
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/adapters/RoomsAdapter.kt:28:17 Unresolved reference: roomTitle
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/adapters/RoomsAdapter.kt:28:27 Variable expected
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/adapters/RoomsAdapter.kt:29:17 Unresolved reference: roomLocation
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/adapters/RoomsAdapter.kt:29:30 Variable expected
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/adapters/RoomsAdapter.kt:30:17 Unresolved reference: roomPrice
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/adapters/RoomsAdapter.kt:30:27 Variable expected
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/adapters/RoomsAdapter.kt:31:17 Unresolved reference: roomType
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/adapters/RoomsAdapter.kt:31:26 Variable expected
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/adapters/RoomsAdapter.kt:32:17 Unresolved reference: roomRating
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/adapters/RoomsAdapter.kt:32:28 Variable expected
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/adapters/RoomsAdapter.kt:35:17 Unresolved reference: roomAmenities
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/adapters/RoomsAdapter.kt:35:31 Variable expected
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/adapters/RoomsAdapter.kt:35:53 Unresolved reference: joinToString
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/adapters/RoomsAdapter.kt:40:39 Class 'kotlin.ranges.IntRange' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/ranges/IntRange.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/adapters/RoomsAdapter.kt:40:45 Unresolved reference: map
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/adapters/RoomsAdapter.kt:40:66 Unresolved reference: it
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/adapters/RoomsAdapter.kt:41:68 Unresolved reference: it
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/adapters/RoomsAdapter.kt:43:21 Unresolved reference: roomStatus
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/adapters/RoomsAdapter.kt:43:32 Variable expected
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/adapters/RoomsAdapter.kt:44:21 Unresolved reference: roomStatus
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/adapters/RoomsAdapter.kt:46:21 Unresolved reference: roomStatus
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/adapters/RoomsAdapter.kt:46:32 Variable expected
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/adapters/RoomsAdapter.kt:47:21 Unresolved reference: roomStatus
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/adapters/RoomsAdapter.kt:50:17 Unresolved reference: root
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/adapters/RoomsAdapter.kt:50:43 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/adapters/RoomsAdapter.kt:61:16 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/admin/AdminHome.kt:21:9 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/admin/AdminHome.kt:22:27 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/admin/AdminHome.kt:23:15 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/admin/AdminHome.kt:24:9 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/admin/AdminHome.kt:25:20 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/admin/AdminHome.kt:27:15 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/admin/AdminHome.kt:30:9 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/admin/AdminHome.kt:32:38 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/admin/AdminHome.kt:33:13 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/admin/AdminHome.kt:34:32 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/admin/AdminHome.kt:35:36 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/admin/AdminHome.kt:36:36 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/admin/auth/AdminLogin.kt:17:9 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/admin/auth/AdminLogin.kt:18:27 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/admin/auth/AdminLogin.kt:19:15 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/admin/auth/AdminLogin.kt:20:9 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/admin/auth/AdminLogin.kt:21:20 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/admin/auth/AdminLogin.kt:23:15 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/admin/auth/AdminLogin.kt:27:26 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/admin/auth/AdminLogin.kt:28:13 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/admin/auth/AdminLogin.kt:28:57 Unresolved reference: java
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/admin/auth/AdminLogin.kt:29:13 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/admin/fragment/AvailableFragment.kt:24:40 Unresolved reference: ArrayList
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/admin/fragment/AvailableFragment.kt:30:9 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/admin/fragment/AvailableFragment.kt:32:9 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/admin/fragment/AvailableFragment.kt:33:9 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/admin/fragment/AvailableFragment.kt:34:9 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/admin/fragment/AvailableFragment.kt:41:9 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/admin/fragment/AvailableFragment.kt:41:24 Unresolved reference: ArrayList
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/admin/fragment/AvailableFragment.kt:41:65 Unresolved reference: it
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/admin/fragment/AvailableFragment.kt:45:9 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/admin/fragment/AvailableFragment.kt:48:74 Unresolved reference: java
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/admin/fragment/AvailableFragment.kt:48:80 Unresolved reference: apply
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/admin/fragment/AvailableFragment.kt:49:21 Unresolved reference: putExtra
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/admin/fragment/AvailableFragment.kt:51:17 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/admin/fragment/AvailableFragment.kt:55:35 Unresolved reference: apply
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/admin/fragment/AvailableFragment.kt:56:13 Unresolved reference: layoutManager
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/admin/fragment/AvailableFragment.kt:57:13 Unresolved reference: adapter
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/admin/fragment/AvailableFragment.kt:62:32 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/admin/fragment/AvailableFragment.kt:63:59 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/admin/fragment/AvailableFragment.kt:64:100 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/admin/fragment/AvailableFragment.kt:66:42 Unresolved reference: lowercase
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/admin/fragment/AvailableFragment.kt:70:22 Unresolved reference: it
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/admin/fragment/AvailableFragment.kt:71:29 Unresolved reference: it
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/admin/fragment/AvailableFragment.kt:72:37 Unresolved reference: it
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/admin/fragment/AvailableFragment.kt:75:30 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/admin/fragment/BookedFragment.kt:24:40 Unresolved reference: ArrayList
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/admin/fragment/BookedFragment.kt:30:9 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/admin/fragment/BookedFragment.kt:32:9 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/admin/fragment/BookedFragment.kt:33:9 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/admin/fragment/BookedFragment.kt:34:9 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/admin/fragment/BookedFragment.kt:41:9 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/admin/fragment/BookedFragment.kt:41:24 Unresolved reference: ArrayList
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/admin/fragment/BookedFragment.kt:41:64 Unresolved reference: it
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/admin/fragment/BookedFragment.kt:45:9 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/admin/fragment/BookedFragment.kt:48:74 Unresolved reference: java
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/admin/fragment/BookedFragment.kt:48:80 Unresolved reference: apply
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/admin/fragment/BookedFragment.kt:49:21 Unresolved reference: putExtra
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/admin/fragment/BookedFragment.kt:51:17 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/admin/fragment/BookedFragment.kt:55:35 Unresolved reference: apply
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/admin/fragment/BookedFragment.kt:56:13 Unresolved reference: layoutManager
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/admin/fragment/BookedFragment.kt:57:13 Unresolved reference: adapter
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/admin/fragment/BookedFragment.kt:62:32 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/admin/fragment/BookedFragment.kt:63:59 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/admin/fragment/BookedFragment.kt:64:100 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/admin/fragment/BookedFragment.kt:66:42 Unresolved reference: lowercase
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/admin/fragment/BookedFragment.kt:70:21 Unresolved reference: it
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/admin/fragment/BookedFragment.kt:71:25 Unresolved reference: it
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/admin/fragment/BookedFragment.kt:72:25 Unresolved reference: it
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/admin/fragment/BookedFragment.kt:75:30 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/admin/fragment/UploadFragment.kt:25:37 Unresolved reference: mutableListOf
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/admin/fragment/UploadFragment.kt:31:108 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/admin/fragment/UploadFragment.kt:34:43 Unresolved reference: take
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/admin/fragment/UploadFragment.kt:35:27 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/admin/fragment/UploadFragment.kt:40:9 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/admin/fragment/UploadFragment.kt:41:13 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/admin/fragment/UploadFragment.kt:43:95 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/admin/fragment/UploadFragment.kt:51:9 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/admin/fragment/UploadFragment.kt:52:9 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/admin/fragment/UploadFragment.kt:58:9 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/admin/fragment/UploadFragment.kt:59:36 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/admin/fragment/UploadFragment.kt:60:36 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/admin/fragment/UploadFragment.kt:63:33 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/admin/fragment/UploadFragment.kt:64:13 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/admin/fragment/UploadFragment.kt:69:17 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/admin/fragment/UploadFragment.kt:71:36 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/admin/fragment/UploadFragment.kt:76:34 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/admin/fragment/UploadFragment.kt:83:68 Unresolved reference: toDoubleOrNull
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/admin/fragment/UploadFragment.kt:84:66 Unresolved reference: toFloatOrNull
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/admin/fragment/UploadFragment.kt:85:72 Unresolved reference: split
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/admin/fragment/UploadFragment.kt:85:92 Unresolved reference: trim
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/admin/fragment/UploadFragment.kt:85:113 Unresolved reference: isNotEmpty
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/admin/fragment/UploadFragment.kt:87:86 Unresolved reference: split
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/admin/fragment/UploadFragment.kt:87:106 Unresolved reference: trim
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/admin/fragment/UploadFragment.kt:87:127 Unresolved reference: isNotEmpty
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/admin/fragment/UploadFragment.kt:102:100 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/admin/fragment/UploadFragment.kt:103:17 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/admin/fragment/UploadFragment.kt:109:28 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/admin/fragment/UploadFragment.kt:114:9 Unresolved reference: with
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/admin/fragment/UploadFragment.kt:116:104 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/admin/fragment/UploadFragment.kt:119:13 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/admin/fragment/UploadFragment.kt:119:17 Unresolved reference: roomNameInput
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/admin/fragment/UploadFragment.kt:120:17 Unresolved reference: roomNameLayout
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/admin/fragment/UploadFragment.kt:120:32 Variable expected
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/admin/fragment/UploadFragment.kt:123:17 Unresolved reference: roomNameLayout
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/admin/fragment/UploadFragment.kt:123:32 Variable expected
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/admin/fragment/UploadFragment.kt:125:13 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/admin/fragment/UploadFragment.kt:125:17 Unresolved reference: roomTypeInput
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/admin/fragment/UploadFragment.kt:126:17 Unresolved reference: roomTypeLayout
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/admin/fragment/UploadFragment.kt:126:32 Variable expected
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/admin/fragment/UploadFragment.kt:129:17 Unresolved reference: roomTypeLayout
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/admin/fragment/UploadFragment.kt:129:32 Variable expected
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/admin/fragment/UploadFragment.kt:131:13 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/admin/fragment/UploadFragment.kt:131:17 Unresolved reference: roomLocationInput
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/admin/fragment/UploadFragment.kt:132:17 Unresolved reference: roomLocationLayout
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/admin/fragment/UploadFragment.kt:132:36 Variable expected
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/admin/fragment/UploadFragment.kt:135:17 Unresolved reference: roomLocationLayout
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/admin/fragment/UploadFragment.kt:135:36 Variable expected
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/admin/fragment/UploadFragment.kt:137:13 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/admin/fragment/UploadFragment.kt:137:17 Unresolved reference: roomPriceInput
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/admin/fragment/UploadFragment.kt:138:17 Unresolved reference: roomPriceLayout
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/admin/fragment/UploadFragment.kt:138:33 Variable expected
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/admin/fragment/UploadFragment.kt:141:17 Unresolved reference: roomPriceLayout
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/admin/fragment/UploadFragment.kt:141:33 Variable expected
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/admin/fragment/UploadFragment.kt:143:13 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/admin/fragment/UploadFragment.kt:143:17 Unresolved reference: ratingInput
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/admin/fragment/UploadFragment.kt:144:17 Unresolved reference: ratingLayout
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/admin/fragment/UploadFragment.kt:144:30 Variable expected
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/admin/fragment/UploadFragment.kt:147:17 Unresolved reference: ratingLayout
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/admin/fragment/UploadFragment.kt:147:30 Variable expected
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/admin/fragment/UploadFragment.kt:149:13 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/admin/fragment/UploadFragment.kt:149:17 Unresolved reference: amenitiesInput
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/admin/fragment/UploadFragment.kt:150:17 Unresolved reference: amenitiesLayout
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/admin/fragment/UploadFragment.kt:150:33 Variable expected
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/admin/fragment/UploadFragment.kt:153:17 Unresolved reference: amenitiesLayout
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/admin/fragment/UploadFragment.kt:153:33 Variable expected
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/admin/fragment/UploadFragment.kt:155:13 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/admin/fragment/UploadFragment.kt:155:17 Unresolved reference: roomDescriptionInput
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/admin/fragment/UploadFragment.kt:156:17 Unresolved reference: roomDescriptionLayout
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/admin/fragment/UploadFragment.kt:156:39 Variable expected
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/admin/fragment/UploadFragment.kt:159:17 Unresolved reference: roomDescriptionLayout
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/admin/fragment/UploadFragment.kt:159:39 Variable expected
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/admin/fragment/UploadFragment.kt:163:101 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/admin/fragment/UploadFragment.kt:170:23 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/admin/fragment/UploadFragment.kt:171:9 Unresolved reference: with
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/admin/fragment/UploadFragment.kt:172:13 Unresolved reference: roomNameInput
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/admin/fragment/UploadFragment.kt:173:13 Unresolved reference: roomTypeInput
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/admin/fragment/UploadFragment.kt:174:13 Unresolved reference: roomLocationInput
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/admin/fragment/UploadFragment.kt:175:13 Unresolved reference: roomPriceInput
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/admin/fragment/UploadFragment.kt:176:13 Unresolved reference: ratingInput
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/admin/fragment/UploadFragment.kt:177:13 Unresolved reference: amenitiesInput
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/admin/fragment/UploadFragment.kt:178:13 Unresolved reference: roomDescriptionInput
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/admin/fragment/UploadFragment.kt:179:13 Unresolved reference: unavailableDatesInput
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/admin/fragment/UploadFragment.kt:184:15 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/admin/fragment/UploadFragment.kt:185:9 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/admin/fragment/UploadFragment.kt:191:70 Unresolved reference: apply
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/admin/fragment/UploadFragment.kt:192:17 Unresolved reference: layoutParams
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/admin/fragment/UploadFragment.kt:193:17 Unresolved reference: scaleType
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/admin/fragment/UploadFragment.kt:194:17 Unresolved reference: setPadding
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/auth/Login.kt:18:9 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/auth/Login.kt:19:15 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/auth/Login.kt:20:9 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/auth/Login.kt:21:9 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/auth/Login.kt:22:20 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/auth/Login.kt:24:15 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/auth/Login.kt:28:26 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/auth/Login.kt:29:13 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/auth/Login.kt:29:52 Unresolved reference: java
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/auth/Login.kt:30:13 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/auth/Login.kt:33:28 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/auth/Login.kt:34:13 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/auth/Login.kt:34:56 Unresolved reference: java
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/auth/Login.kt:35:13 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/auth/Register.kt:16:9 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/auth/Register.kt:17:27 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/auth/Register.kt:18:15 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/auth/Register.kt:20:9 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/auth/Register.kt:22:20 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/auth/Register.kt:24:15 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/auth/Register.kt:28:29 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/auth/Register.kt:29:13 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/auth/Register.kt:29:52 Unresolved reference: java
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/auth/Register.kt:30:13 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/auth/Register.kt:33:25 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/auth/Register.kt:34:13 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/auth/Register.kt:34:53 Unresolved reference: java
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/auth/Register.kt:35:13 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/fragments/BookingsFragment.kt:24:40 Unresolved reference: ArrayList
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/fragments/BookingsFragment.kt:30:9 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/fragments/BookingsFragment.kt:32:9 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/fragments/BookingsFragment.kt:33:9 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/fragments/BookingsFragment.kt:34:9 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/fragments/BookingsFragment.kt:41:9 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/fragments/BookingsFragment.kt:41:24 Unresolved reference: ArrayList
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/fragments/BookingsFragment.kt:41:64 Unresolved reference: it
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/fragments/BookingsFragment.kt:45:9 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/fragments/BookingsFragment.kt:48:74 Unresolved reference: java
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/fragments/BookingsFragment.kt:48:80 Unresolved reference: apply
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/fragments/BookingsFragment.kt:49:21 Unresolved reference: putExtra
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/fragments/BookingsFragment.kt:51:17 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/fragments/BookingsFragment.kt:55:35 Unresolved reference: apply
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/fragments/BookingsFragment.kt:56:13 Unresolved reference: layoutManager
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/fragments/BookingsFragment.kt:57:13 Unresolved reference: adapter
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/fragments/BookingsFragment.kt:62:32 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/fragments/BookingsFragment.kt:63:59 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/fragments/BookingsFragment.kt:64:100 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/fragments/BookingsFragment.kt:66:42 Unresolved reference: lowercase
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/fragments/BookingsFragment.kt:70:21 Unresolved reference: it
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/fragments/BookingsFragment.kt:71:25 Unresolved reference: it
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/fragments/BookingsFragment.kt:72:25 Unresolved reference: it
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/fragments/BookingsFragment.kt:75:30 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/fragments/HomeFragment.kt:14:36 Unresolved reference: RoomEntity
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/fragments/HomeFragment.kt:23:40 Unresolved reference: ArrayList
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/fragments/HomeFragment.kt:29:9 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/fragments/HomeFragment.kt:30:9 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/fragments/HomeFragment.kt:31:9 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/fragments/HomeFragment.kt:36:9 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/fragments/HomeFragment.kt:36:24 Unresolved reference: ArrayList
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/fragments/HomeFragment.kt:40:9 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/fragments/HomeFragment.kt:43:90 Unresolved reference: java
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/fragments/HomeFragment.kt:43:96 Unresolved reference: apply
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/fragments/HomeFragment.kt:44:21 Unresolved reference: putExtra
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/fragments/HomeFragment.kt:46:17 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/fragments/HomeFragment.kt:49:35 Unresolved reference: apply
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/fragments/HomeFragment.kt:50:13 Unresolved reference: layoutManager
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/fragments/HomeFragment.kt:51:13 Unresolved reference: adapter
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/fragments/MyBookingsFragment.kt:22:9 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/fragments/MyBookingsFragment.kt:23:9 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/fragments/MyBookingsFragment.kt:28:59 Unresolved reference: it
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/fragments/MyBookingsFragment.kt:29:9 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/fragments/MyBookingsFragment.kt:30:35 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/fragments/MyBookingsFragment.kt:31:35 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/fragments/MyBookingsFragment.kt:37:16 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/fragments/MyBookingsFragment.kt:42:43 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/fragments/ProfileFragment.kt:33:13 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/fragments/ProfileFragment.kt:34:17 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/fragments/ProfileFragment.kt:36:35 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/fragments/ProfileFragment.kt:37:35 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/fragments/ProfileFragment.kt:42:32 Unresolved reference: let
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/fragments/ProfileFragment.kt:42:38 Cannot infer a type for this parameter. Please specify it explicitly.
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/fragments/ProfileFragment.kt:43:17 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/fragments/ProfileFragment.kt:51:9 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/fragments/ProfileFragment.kt:56:15 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/fragments/ProfileFragment.kt:57:9 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/fragments/ProfileFragment.kt:59:34 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/fragments/ProfileFragment.kt:60:13 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/fragments/ProfileFragment.kt:63:29 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/fragments/ProfileFragment.kt:64:70 Unresolved reference: java
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/fragments/ProfileFragment.kt:65:13 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/fragments/ProfileFragment.kt:66:31 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/fragments/ProfileFragment.kt:69:30 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/fragments/ProfileFragment.kt:70:65 Unresolved reference: java
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/fragments/ProfileFragment.kt:71:13 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/fragments/ProfileFragment.kt:77:26 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/fragments/ProfileFragment.kt:78:27 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/fragments/ProfileFragment.kt:79:27 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/fragments/ProfileFragment.kt:80:30 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/fragments/ProfileFragment.kt:81:30 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/fragments/ProfileFragment.kt:90:9 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/fragments/ProfileFragment.kt:95:13 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/fragments/ProfileFragment.kt:97:39 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/fragments/ProfileFragment.kt:103:27 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/fragments/ProfileFragment.kt:107:9 Class 'kotlin.coroutines.CoroutineContext' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/coroutines/CoroutineContext.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/fragments/ProfileFragment.kt:107:40 Class 'kotlin.coroutines.CoroutineContext' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/coroutines/CoroutineContext.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/fragments/ProfileFragment.kt:108:13 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/fragments/ProfileFragment.kt:110:30 Unresolved reference: use
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/fragments/ProfileFragment.kt:110:36 Cannot infer a type for this parameter. Please specify it explicitly.
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/fragments/ProfileFragment.kt:112:21 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/fragments/ProfileFragment.kt:112:21 Class 'kotlin.coroutines.CoroutineContext' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/coroutines/CoroutineContext.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/fragments/ProfileFragment.kt:112:21 Suspension functions can be called only within coroutine body
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/fragments/ProfileFragment.kt:113:46 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/fragments/ProfileFragment.kt:120:43 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/fragments/ProfileFragment.kt:124:17 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/fragments/ProfileFragment.kt:124:17 Class 'kotlin.coroutines.CoroutineContext' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/coroutines/CoroutineContext.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/fragments/ProfileFragment.kt:125:39 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/fragments/ProfileFragment.kt:126:39 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/fragments/ProfileFragment.kt:133:15 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/fragments/ProfileFragment.kt:134:9 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/models/Converters.kt:14:47 Unresolved reference: emptyList
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/models/SharedData.kt:11:21 Unresolved reference: arrayListOf
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/models/SharedData.kt:14:22 Unresolved reference: listOf
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/models/SharedData.kt:19:25 Unresolved reference: listOf
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/models/SharedData.kt:22:32 Unresolved reference: listOf
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/models/SharedData.kt:26:22 Unresolved reference: listOf
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/models/SharedData.kt:31:25 Unresolved reference: listOf
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/models/SharedData.kt:34:32 Unresolved reference: listOf
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/models/SharedData.kt:38:22 Unresolved reference: listOf
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/models/SharedData.kt:43:25 Unresolved reference: listOf
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/models/SharedData.kt:46:32 Unresolved reference: listOf
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/models/SharedData.kt:49:24 Unresolved reference: arrayListOf
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/screens/RoomDetails.kt:22:15 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/screens/RoomDetails.kt:23:9 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/screens/RoomDetails.kt:24:27 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/screens/RoomDetails.kt:25:9 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/screens/RoomDetails.kt:27:20 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/screens/RoomDetails.kt:29:18 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/screens/RoomDetails.kt:35:48 Unresolved reference: it
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/screens/RoomDetails.kt:37:13 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/screens/RoomDetails.kt:50:27 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/screens/RoomDetails.kt:51:34 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/screens/RoomDetails.kt:52:34 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/screens/RoomDetails.kt:59:28 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/screens/RoomDetails.kt:63:29 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/screens/RoomDetails.kt:67:32 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/screens/RoomDetails.kt:75:17 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/screens/RoomDetails.kt:76:105 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/screens/RoomDetails.kt:92:106 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/screens/RoomDetails.kt:94:45 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/screens/RoomDetails.kt:98:20 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/screens/RoomDetails.kt:102:26 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+e: file:///C:/Users/ndira/AndroidStudioProjects/MosBookings/app/src/main/java/com/jeff/mosbookings/screens/RoomDetails.kt:103:13 Class 'kotlin.Unit' was compiled with an incompatible version of Kotlin. The actual metadata version is 2.1.0, but the compiler version 1.9.0 can read versions up to 2.0.0.
+The class is loaded from C:/Users/ndira/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.1.10/d3028429e7151d7a7c1a0d63a4f60eac86a87b91/kotlin-stdlib-2.1.10.jar!/kotlin/Unit.class
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':app:compileDebugKotlin'.
+> A failure occurred while executing org.jetbrains.kotlin.compilerRunner.GradleCompilerRunnerWithWorkers$GradleKotlinCompilerWorkAction
+   > Compilation error. See log for more details
+
+* Try:
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights.
+> Get more help at https://help.gradle.org.
+
+* Exception is:
+org.gradle.api.tasks.TaskExecutionException: Execution failed for task ':app:compileDebugKotlin'.
+	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.lambda$executeIfValid$1(ExecuteActionsTaskExecuter.java:130)
+	at org.gradle.internal.Try$Failure.ifSuccessfulOrElse(Try.java:293)
+	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.executeIfValid(ExecuteActionsTaskExecuter.java:128)
+	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.execute(ExecuteActionsTaskExecuter.java:116)
+	at org.gradle.api.internal.tasks.execution.FinalizePropertiesTaskExecuter.execute(FinalizePropertiesTaskExecuter.java:46)
+	at org.gradle.api.internal.tasks.execution.ResolveTaskExecutionModeExecuter.execute(ResolveTaskExecutionModeExecuter.java:51)
+	at org.gradle.api.internal.tasks.execution.SkipTaskWithNoActionsExecuter.execute(SkipTaskWithNoActionsExecuter.java:57)
+	at org.gradle.api.internal.tasks.execution.SkipOnlyIfTaskExecuter.execute(SkipOnlyIfTaskExecuter.java:74)
+	at org.gradle.api.internal.tasks.execution.CatchExceptionTaskExecuter.execute(CatchExceptionTaskExecuter.java:36)
+	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter$1.executeTask(EventFiringTaskExecuter.java:77)
+	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter$1.call(EventFiringTaskExecuter.java:55)
+	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter$1.call(EventFiringTaskExecuter.java:52)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:209)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:204)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:66)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:59)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:166)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:59)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.call(DefaultBuildOperationRunner.java:53)
+	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter.execute(EventFiringTaskExecuter.java:52)
+	at org.gradle.execution.plan.LocalTaskNodeExecutor.execute(LocalTaskNodeExecutor.java:42)
+	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$InvokeNodeExecutorsAction.execute(DefaultTaskExecutionGraph.java:331)
+	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$InvokeNodeExecutorsAction.execute(DefaultTaskExecutionGraph.java:318)
+	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$BuildOperationAwareExecutionAction.lambda$execute$0(DefaultTaskExecutionGraph.java:314)
+	at org.gradle.internal.operations.CurrentBuildOperationRef.with(CurrentBuildOperationRef.java:85)
+	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$BuildOperationAwareExecutionAction.execute(DefaultTaskExecutionGraph.java:314)
+	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$BuildOperationAwareExecutionAction.execute(DefaultTaskExecutionGraph.java:303)
+	at org.gradle.execution.plan.DefaultPlanExecutor$ExecutorWorker.execute(DefaultPlanExecutor.java:459)
+	at org.gradle.execution.plan.DefaultPlanExecutor$ExecutorWorker.run(DefaultPlanExecutor.java:376)
+	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
+	at org.gradle.internal.concurrent.AbstractManagedExecutor$1.run(AbstractManagedExecutor.java:48)
+Caused by: org.gradle.workers.internal.DefaultWorkerExecutor$WorkExecutionException: A failure occurred while executing org.jetbrains.kotlin.compilerRunner.GradleCompilerRunnerWithWorkers$GradleKotlinCompilerWorkAction
+	at org.gradle.workers.internal.DefaultWorkerExecutor$WorkItemExecution.waitForCompletion(DefaultWorkerExecutor.java:287)
+	at org.gradle.internal.work.DefaultAsyncWorkTracker.lambda$waitForItemsAndGatherFailures$2(DefaultAsyncWorkTracker.java:130)
+	at org.gradle.internal.Factories$1.create(Factories.java:31)
+	at org.gradle.internal.work.DefaultWorkerLeaseService.withoutLocks(DefaultWorkerLeaseService.java:335)
+	at org.gradle.internal.work.DefaultWorkerLeaseService.withoutLocks(DefaultWorkerLeaseService.java:318)
+	at org.gradle.internal.work.DefaultWorkerLeaseService.withoutLock(DefaultWorkerLeaseService.java:323)
+	at org.gradle.internal.work.DefaultAsyncWorkTracker.waitForItemsAndGatherFailures(DefaultAsyncWorkTracker.java:126)
+	at org.gradle.internal.work.DefaultAsyncWorkTracker.waitForItemsAndGatherFailures(DefaultAsyncWorkTracker.java:92)
+	at org.gradle.internal.work.DefaultAsyncWorkTracker.waitForAll(DefaultAsyncWorkTracker.java:78)
+	at org.gradle.internal.work.DefaultAsyncWorkTracker.waitForCompletion(DefaultAsyncWorkTracker.java:66)
+	at org.gradle.api.internal.tasks.execution.TaskExecution$3.run(TaskExecution.java:252)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$1.execute(DefaultBuildOperationRunner.java:29)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$1.execute(DefaultBuildOperationRunner.java:26)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:66)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:59)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:166)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:59)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.run(DefaultBuildOperationRunner.java:47)
+	at org.gradle.api.internal.tasks.execution.TaskExecution.executeAction(TaskExecution.java:229)
+	at org.gradle.api.internal.tasks.execution.TaskExecution.executeActions(TaskExecution.java:212)
+	at org.gradle.api.internal.tasks.execution.TaskExecution.executeWithPreviousOutputFiles(TaskExecution.java:195)
+	at org.gradle.api.internal.tasks.execution.TaskExecution.execute(TaskExecution.java:162)
+	at org.gradle.internal.execution.steps.ExecuteStep.executeInternal(ExecuteStep.java:105)
+	at org.gradle.internal.execution.steps.ExecuteStep.access$000(ExecuteStep.java:44)
+	at org.gradle.internal.execution.steps.ExecuteStep$1.call(ExecuteStep.java:59)
+	at org.gradle.internal.execution.steps.ExecuteStep$1.call(ExecuteStep.java:56)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:209)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:204)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:66)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:59)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:166)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:59)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.call(DefaultBuildOperationRunner.java:53)
+	at org.gradle.internal.execution.steps.ExecuteStep.execute(ExecuteStep.java:56)
+	at org.gradle.internal.execution.steps.ExecuteStep.execute(ExecuteStep.java:44)
+	at org.gradle.internal.execution.steps.CancelExecutionStep.execute(CancelExecutionStep.java:42)
+	at org.gradle.internal.execution.steps.TimeoutStep.executeWithoutTimeout(TimeoutStep.java:75)
+	at org.gradle.internal.execution.steps.TimeoutStep.execute(TimeoutStep.java:55)
+	at org.gradle.internal.execution.steps.PreCreateOutputParentsStep.execute(PreCreateOutputParentsStep.java:50)
+	at org.gradle.internal.execution.steps.PreCreateOutputParentsStep.execute(PreCreateOutputParentsStep.java:28)
+	at org.gradle.internal.execution.steps.RemovePreviousOutputsStep.execute(RemovePreviousOutputsStep.java:67)
+	at org.gradle.internal.execution.steps.RemovePreviousOutputsStep.execute(RemovePreviousOutputsStep.java:37)
+	at org.gradle.internal.execution.steps.BroadcastChangingOutputsStep.execute(BroadcastChangingOutputsStep.java:61)
+	at org.gradle.internal.execution.steps.BroadcastChangingOutputsStep.execute(BroadcastChangingOutputsStep.java:26)
+	at org.gradle.internal.execution.steps.CaptureOutputsAfterExecutionStep.execute(CaptureOutputsAfterExecutionStep.java:69)
+	at org.gradle.internal.execution.steps.CaptureOutputsAfterExecutionStep.execute(CaptureOutputsAfterExecutionStep.java:46)
+	at org.gradle.internal.execution.steps.ResolveInputChangesStep.execute(ResolveInputChangesStep.java:40)
+	at org.gradle.internal.execution.steps.ResolveInputChangesStep.execute(ResolveInputChangesStep.java:29)
+	at org.gradle.internal.execution.steps.BuildCacheStep.executeWithoutCache(BuildCacheStep.java:189)
+	at org.gradle.internal.execution.steps.BuildCacheStep.lambda$execute$1(BuildCacheStep.java:75)
+	at org.gradle.internal.Either$Right.fold(Either.java:175)
+	at org.gradle.internal.execution.caching.CachingState.fold(CachingState.java:62)
+	at org.gradle.internal.execution.steps.BuildCacheStep.execute(BuildCacheStep.java:73)
+	at org.gradle.internal.execution.steps.BuildCacheStep.execute(BuildCacheStep.java:48)
+	at org.gradle.internal.execution.steps.StoreExecutionStateStep.execute(StoreExecutionStateStep.java:46)
+	at org.gradle.internal.execution.steps.StoreExecutionStateStep.execute(StoreExecutionStateStep.java:35)
+	at org.gradle.internal.execution.steps.SkipUpToDateStep.executeBecause(SkipUpToDateStep.java:75)
+	at org.gradle.internal.execution.steps.SkipUpToDateStep.lambda$execute$2(SkipUpToDateStep.java:53)
+	at org.gradle.internal.execution.steps.SkipUpToDateStep.execute(SkipUpToDateStep.java:53)
+	at org.gradle.internal.execution.steps.SkipUpToDateStep.execute(SkipUpToDateStep.java:35)
+	at org.gradle.internal.execution.steps.legacy.MarkSnapshottingInputsFinishedStep.execute(MarkSnapshottingInputsFinishedStep.java:37)
+	at org.gradle.internal.execution.steps.legacy.MarkSnapshottingInputsFinishedStep.execute(MarkSnapshottingInputsFinishedStep.java:27)
+	at org.gradle.internal.execution.steps.ResolveIncrementalCachingStateStep.executeDelegate(ResolveIncrementalCachingStateStep.java:49)
+	at org.gradle.internal.execution.steps.ResolveIncrementalCachingStateStep.executeDelegate(ResolveIncrementalCachingStateStep.java:27)
+	at org.gradle.internal.execution.steps.AbstractResolveCachingStateStep.execute(AbstractResolveCachingStateStep.java:71)
+	at org.gradle.internal.execution.steps.AbstractResolveCachingStateStep.execute(AbstractResolveCachingStateStep.java:39)
+	at org.gradle.internal.execution.steps.ResolveChangesStep.execute(ResolveChangesStep.java:65)
+	at org.gradle.internal.execution.steps.ResolveChangesStep.execute(ResolveChangesStep.java:36)
+	at org.gradle.internal.execution.steps.ValidateStep.execute(ValidateStep.java:107)
+	at org.gradle.internal.execution.steps.ValidateStep.execute(ValidateStep.java:56)
+	at org.gradle.internal.execution.steps.AbstractCaptureStateBeforeExecutionStep.execute(AbstractCaptureStateBeforeExecutionStep.java:64)
+	at org.gradle.internal.execution.steps.AbstractCaptureStateBeforeExecutionStep.execute(AbstractCaptureStateBeforeExecutionStep.java:43)
+	at org.gradle.internal.execution.steps.AbstractSkipEmptyWorkStep.executeWithNonEmptySources(AbstractSkipEmptyWorkStep.java:125)
+	at org.gradle.internal.execution.steps.AbstractSkipEmptyWorkStep.execute(AbstractSkipEmptyWorkStep.java:61)
+	at org.gradle.internal.execution.steps.AbstractSkipEmptyWorkStep.execute(AbstractSkipEmptyWorkStep.java:36)
+	at org.gradle.internal.execution.steps.legacy.MarkSnapshottingInputsStartedStep.execute(MarkSnapshottingInputsStartedStep.java:38)
+	at org.gradle.internal.execution.steps.LoadPreviousExecutionStateStep.execute(LoadPreviousExecutionStateStep.java:36)
+	at org.gradle.internal.execution.steps.LoadPreviousExecutionStateStep.execute(LoadPreviousExecutionStateStep.java:23)
+	at org.gradle.internal.execution.steps.HandleStaleOutputsStep.execute(HandleStaleOutputsStep.java:75)
+	at org.gradle.internal.execution.steps.HandleStaleOutputsStep.execute(HandleStaleOutputsStep.java:41)
+	at org.gradle.internal.execution.steps.AssignMutableWorkspaceStep.lambda$execute$0(AssignMutableWorkspaceStep.java:35)
+	at org.gradle.api.internal.tasks.execution.TaskExecution$4.withWorkspace(TaskExecution.java:289)
+	at org.gradle.internal.execution.steps.AssignMutableWorkspaceStep.execute(AssignMutableWorkspaceStep.java:31)
+	at org.gradle.internal.execution.steps.AssignMutableWorkspaceStep.execute(AssignMutableWorkspaceStep.java:22)
+	at org.gradle.internal.execution.steps.ChoosePipelineStep.execute(ChoosePipelineStep.java:40)
+	at org.gradle.internal.execution.steps.ChoosePipelineStep.execute(ChoosePipelineStep.java:23)
+	at org.gradle.internal.execution.steps.ExecuteWorkBuildOperationFiringStep.lambda$execute$2(ExecuteWorkBuildOperationFiringStep.java:67)
+	at org.gradle.internal.execution.steps.ExecuteWorkBuildOperationFiringStep.execute(ExecuteWorkBuildOperationFiringStep.java:67)
+	at org.gradle.internal.execution.steps.ExecuteWorkBuildOperationFiringStep.execute(ExecuteWorkBuildOperationFiringStep.java:39)
+	at org.gradle.internal.execution.steps.IdentityCacheStep.execute(IdentityCacheStep.java:46)
+	at org.gradle.internal.execution.steps.IdentityCacheStep.execute(IdentityCacheStep.java:34)
+	at org.gradle.internal.execution.steps.IdentifyStep.execute(IdentifyStep.java:48)
+	at org.gradle.internal.execution.steps.IdentifyStep.execute(IdentifyStep.java:35)
+	at org.gradle.internal.execution.impl.DefaultExecutionEngine$1.execute(DefaultExecutionEngine.java:61)
+	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.executeIfValid(ExecuteActionsTaskExecuter.java:127)
+	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.execute(ExecuteActionsTaskExecuter.java:116)
+	at org.gradle.api.internal.tasks.execution.FinalizePropertiesTaskExecuter.execute(FinalizePropertiesTaskExecuter.java:46)
+	at org.gradle.api.internal.tasks.execution.ResolveTaskExecutionModeExecuter.execute(ResolveTaskExecutionModeExecuter.java:51)
+	at org.gradle.api.internal.tasks.execution.SkipTaskWithNoActionsExecuter.execute(SkipTaskWithNoActionsExecuter.java:57)
+	at org.gradle.api.internal.tasks.execution.SkipOnlyIfTaskExecuter.execute(SkipOnlyIfTaskExecuter.java:74)
+	at org.gradle.api.internal.tasks.execution.CatchExceptionTaskExecuter.execute(CatchExceptionTaskExecuter.java:36)
+	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter$1.executeTask(EventFiringTaskExecuter.java:77)
+	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter$1.call(EventFiringTaskExecuter.java:55)
+	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter$1.call(EventFiringTaskExecuter.java:52)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:209)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:204)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:66)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:59)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:166)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:59)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.call(DefaultBuildOperationRunner.java:53)
+	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter.execute(EventFiringTaskExecuter.java:52)
+	at org.gradle.execution.plan.LocalTaskNodeExecutor.execute(LocalTaskNodeExecutor.java:42)
+	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$InvokeNodeExecutorsAction.execute(DefaultTaskExecutionGraph.java:331)
+	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$InvokeNodeExecutorsAction.execute(DefaultTaskExecutionGraph.java:318)
+	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$BuildOperationAwareExecutionAction.lambda$execute$0(DefaultTaskExecutionGraph.java:314)
+	at org.gradle.internal.operations.CurrentBuildOperationRef.with(CurrentBuildOperationRef.java:85)
+	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$BuildOperationAwareExecutionAction.execute(DefaultTaskExecutionGraph.java:314)
+	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$BuildOperationAwareExecutionAction.execute(DefaultTaskExecutionGraph.java:303)
+	at org.gradle.execution.plan.DefaultPlanExecutor$ExecutorWorker.execute(DefaultPlanExecutor.java:459)
+	at org.gradle.execution.plan.DefaultPlanExecutor$ExecutorWorker.run(DefaultPlanExecutor.java:376)
+	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
+	at org.gradle.internal.concurrent.AbstractManagedExecutor$1.run(AbstractManagedExecutor.java:48)
+Caused by: org.jetbrains.kotlin.gradle.tasks.CompilationErrorException: Compilation error. See log for more details
+	at org.jetbrains.kotlin.gradle.tasks.TasksUtilsKt.throwExceptionIfCompilationFailed(tasksUtils.kt:20)
+	at org.jetbrains.kotlin.compilerRunner.GradleKotlinCompilerWork.run(GradleKotlinCompilerWork.kt:141)
+	at org.jetbrains.kotlin.compilerRunner.GradleCompilerRunnerWithWorkers$GradleKotlinCompilerWorkAction.execute(GradleCompilerRunnerWithWorkers.kt:73)
+	at org.gradle.workers.internal.DefaultWorkerServer.execute(DefaultWorkerServer.java:63)
+	at org.gradle.workers.internal.NoIsolationWorkerFactory$1$1.create(NoIsolationWorkerFactory.java:66)
+	at org.gradle.workers.internal.NoIsolationWorkerFactory$1$1.create(NoIsolationWorkerFactory.java:62)
+	at org.gradle.internal.classloader.ClassLoaderUtils.executeInClassloader(ClassLoaderUtils.java:100)
+	at org.gradle.workers.internal.NoIsolationWorkerFactory$1.lambda$execute$0(NoIsolationWorkerFactory.java:62)
+	at org.gradle.workers.internal.AbstractWorker$1.call(AbstractWorker.java:44)
+	at org.gradle.workers.internal.AbstractWorker$1.call(AbstractWorker.java:41)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:209)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:204)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:66)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:59)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:166)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:59)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.call(DefaultBuildOperationRunner.java:53)
+	at org.gradle.workers.internal.AbstractWorker.executeWrappedInBuildOperation(AbstractWorker.java:41)
+	at org.gradle.workers.internal.NoIsolationWorkerFactory$1.execute(NoIsolationWorkerFactory.java:59)
+	at org.gradle.workers.internal.DefaultWorkerExecutor.lambda$submitWork$0(DefaultWorkerExecutor.java:174)
+	at org.gradle.internal.work.DefaultConditionalExecutionQueue$ExecutionRunner.runExecution(DefaultConditionalExecutionQueue.java:194)
+	at org.gradle.internal.work.DefaultConditionalExecutionQueue$ExecutionRunner.access$700(DefaultConditionalExecutionQueue.java:127)
+	at org.gradle.internal.work.DefaultConditionalExecutionQueue$ExecutionRunner$1.run(DefaultConditionalExecutionQueue.java:169)
+	at org.gradle.internal.Factories$1.create(Factories.java:31)
+	at org.gradle.internal.work.DefaultWorkerLeaseService.withLocks(DefaultWorkerLeaseService.java:263)
+	at org.gradle.internal.work.DefaultWorkerLeaseService.runAsWorkerThread(DefaultWorkerLeaseService.java:127)
+	at org.gradle.internal.work.DefaultWorkerLeaseService.runAsWorkerThread(DefaultWorkerLeaseService.java:132)
+	at org.gradle.internal.work.DefaultConditionalExecutionQueue$ExecutionRunner.runBatch(DefaultConditionalExecutionQueue.java:164)
+	at org.gradle.internal.work.DefaultConditionalExecutionQueue$ExecutionRunner.run(DefaultConditionalExecutionQueue.java:133)
+	... 2 more
+
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/8.10.2/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+
+BUILD FAILED in 10s
+31 actionable tasks: 31 executed

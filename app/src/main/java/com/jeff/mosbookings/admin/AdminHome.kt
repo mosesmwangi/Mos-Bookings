@@ -9,11 +9,8 @@ import androidx.fragment.app.Fragment
 import com.jeff.mosbookings.R
 import com.jeff.mosbookings.admin.fragment.AvailableFragment
 import com.jeff.mosbookings.admin.fragment.UploadFragment
+import com.jeff.mosbookings.admin.fragment.BookedFragment
 import com.jeff.mosbookings.databinding.ActivityAdminHomeBinding
-import com.jeff.mosbookings.fragments.BookingsFragment
-import com.jeff.mosbookings.fragments.HomeFragment
-import com.jeff.mosbookings.fragments.MyBookingsFragment
-import com.jeff.mosbookings.fragments.ProfileFragment
 
 class AdminHome : AppCompatActivity() {
     private lateinit var binding: ActivityAdminHomeBinding
@@ -32,10 +29,8 @@ class AdminHome : AppCompatActivity() {
         binding.bottomNavigationView.setOnItemSelectedListener {
             when (it.itemId) {
                 R.id.icHome -> replaceFragment(AvailableFragment())
-                R.id.icBookings -> replaceFragment(BookingsFragment())
+                R.id.icBookings -> replaceFragment(BookedFragment())
                 R.id.myBookings -> replaceFragment(UploadFragment())
-
-
                 else -> {
                 }
             }
