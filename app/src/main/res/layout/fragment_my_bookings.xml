@@ -117,6 +117,107 @@
 
         </com.google.android.material.card.MaterialCardView>
 
+        <!-- Filter Chips Section -->
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginBottom="16dp"
+            android:scrollbars="none"
+            android:fillViewport="false">
+
+            <LinearLayout
+                android:id="@+id/filterChipsContainer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipAllBookings"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="All Bookings"
+                    android:textColor="@color/white"
+                    app:chipBackgroundColor="@color/primary_blue"
+                    android:layout_marginEnd="8dp"
+                    app:chipMinHeight="36dp" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipSuites"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Suites"
+                    android:textColor="@color/text_primary"
+                    app:chipBackgroundColor="@color/white"
+                    app:chipStrokeColor="@color/primary_blue_light"
+                    app:chipStrokeWidth="1dp"
+                    android:layout_marginEnd="8dp"
+                    app:chipMinHeight="36dp" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipEnSuite"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="En Suite"
+                    android:textColor="@color/text_primary"
+                    app:chipBackgroundColor="@color/white"
+                    app:chipStrokeColor="@color/primary_blue_light"
+                    app:chipStrokeWidth="1dp"
+                    android:layout_marginEnd="8dp"
+                    app:chipMinHeight="36dp" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipOneBedroom"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="One Bedroom"
+                    android:textColor="@color/text_primary"
+                    app:chipBackgroundColor="@color/white"
+                    app:chipStrokeColor="@color/primary_blue_light"
+                    app:chipStrokeWidth="1dp"
+                    android:layout_marginEnd="8dp"
+                    app:chipMinHeight="36dp" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipTwoBedrooms"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Two Bedrooms"
+                    android:textColor="@color/text_primary"
+                    app:chipBackgroundColor="@color/white"
+                    app:chipStrokeColor="@color/primary_blue_light"
+                    app:chipStrokeWidth="1dp"
+                    android:layout_marginEnd="8dp"
+                    app:chipMinHeight="36dp" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipThreeBedrooms"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Three Bedrooms"
+                    android:textColor="@color/text_primary"
+                    app:chipBackgroundColor="@color/white"
+                    app:chipStrokeColor="@color/primary_blue_light"
+                    app:chipStrokeWidth="1dp"
+                    android:layout_marginEnd="8dp"
+                    app:chipMinHeight="36dp" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipConference"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Conference"
+                    android:textColor="@color/text_primary"
+                    app:chipBackgroundColor="@color/white"
+                    app:chipStrokeColor="@color/primary_blue_light"
+                    app:chipStrokeWidth="1dp"
+                    app:chipMinHeight="36dp" />
+
+            </LinearLayout>
+
+        </HorizontalScrollView>
+
         <ProgressBar
             android:id="@+id/loadingProgressBar"
             android:layout_width="wrap_content"

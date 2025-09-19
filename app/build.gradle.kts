@@ -57,6 +57,9 @@ dependencies {
 
     //circular images:
     implementation (libs.circleimageview)
+    
+    // Charts and analytics
+    implementation("com.github.PhilJay:MPAndroidChart:v3.1.0")
     // Retrofit
     implementation("com.squareup.okhttp3:okhttp:4.9.3")
     implementation("com.squareup.okhttp3:logging-interceptor:4.9.3")

@@ -48,8 +48,8 @@ class BookedFragment : Fragment() {
     }
 
     private fun fetchBookings(startDate: String? = null, endDate: String? = null) {
-        val prefs = requireContext().getSharedPreferences("auth", android.content.Context.MODE_PRIVATE)
-        val token = prefs.getString("jwt", null)
+        val prefs = requireContext().getSharedPreferences("admin_auth", android.content.Context.MODE_PRIVATE)
+        val token = prefs.getString("admin_jwt", null)
         if (token == null) {
             Toast.makeText(requireContext(), "Not authenticated as admin", Toast.LENGTH_SHORT).show()
             return

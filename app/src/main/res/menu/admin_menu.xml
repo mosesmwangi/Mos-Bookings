@@ -11,5 +11,5 @@
     <item
         android:id="@+id/myBookings"
         android:icon="@drawable/baseline_add_24"
-        android:title="Post Room" />
+        android:title="Add Room" />
 </menu>

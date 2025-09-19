@@ -4,6 +4,7 @@ import android.Manifest
 import android.content.pm.PackageManager
 import android.net.Uri
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -94,12 +95,15 @@ class UploadFragment : Fragment() {
                 val description = binding.roomDescriptionInput.text.toString()
                 val unavailableDates = binding.unavailableDatesInput.text.toString().split(",").map { it.trim() }.filter { it.isNotEmpty() }
 
-                val prefs = requireContext().getSharedPreferences("auth", android.content.Context.MODE_PRIVATE)
-                val token = prefs.getString("jwt", null)
+                val prefs = requireContext().getSharedPreferences("admin_auth", android.content.Context.MODE_PRIVATE)
+                val token = prefs.getString("admin_jwt", null)
+                Log.d("UploadFragment", "🔐 ADMIN UPLOAD - Checking admin token: ${token?.take(20)}...")
                 if (token == null) {
+                    Log.w("UploadFragment", "🔐 ADMIN UPLOAD - No admin token found")
                     Toast.makeText(requireContext(), "Not authenticated as admin", Toast.LENGTH_SHORT).show()
                     return@setOnClickListener
                 }
+                Log.d("UploadFragment", "🔐 ADMIN UPLOAD - Admin token found, proceeding with upload")
                 val roomRepository = com.jeff.mosbookings.repository.RoomRepository()
                 GlobalScope.launch {
                     activity?.runOnUiThread {

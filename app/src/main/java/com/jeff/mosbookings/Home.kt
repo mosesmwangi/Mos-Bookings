@@ -10,6 +10,8 @@ import com.jeff.mosbookings.databinding.ActivityHomeBinding
 import com.jeff.mosbookings.fragments.HomeFragment
 import com.jeff.mosbookings.fragments.MyBookingsFragment
 import com.jeff.mosbookings.fragments.ProfileFragment
+import com.jeff.mosbookings.fragments.ReportsFragment
+import com.jeff.mosbookings.dialogs.AIAssistantDialog
 
 class Home : AppCompatActivity() {
 
@@ -28,12 +30,14 @@ class Home : AppCompatActivity() {
         }
 
         replaceFragment(HomeFragment())
+        setupFloatingActionButton()
 
         binding.bottomNavigationView.setOnItemSelectedListener {
             when (it.itemId) {
                 R.id.icHome -> replaceFragment(HomeFragment())
                 R.id.myBookings -> replaceFragment(MyBookingsFragment())
                 R.id.profile -> replaceFragment(ProfileFragment())
+                R.id.reports -> replaceFragment(ReportsFragment())
                 else -> {
                 }
             }
@@ -48,4 +52,12 @@ class Home : AppCompatActivity() {
         fragmentTransaction.replace(R.id.frameLayout, fragment)
         fragmentTransaction.commit()
     }
+    
+    private fun setupFloatingActionButton() {
+        binding.fabAIAssistant.setOnClickListener {
+            val dialog = AIAssistantDialog()
+            dialog.show(supportFragmentManager, "AIAssistantDialog")
+        }
+    }
+    
 }

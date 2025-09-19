@@ -13,6 +13,7 @@ import android.view.ViewGroup
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.lifecycleScope
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -24,6 +25,7 @@ import com.jeff.mosbookings.admin.AdminHome
 import com.jeff.mosbookings.admin.auth.AdminLogin
 import com.jeff.mosbookings.auth.Login
 import com.jeff.mosbookings.databinding.FragmentProfileBinding
+import com.jeff.mosbookings.repository.RoomRepository
 import org.json.JSONObject
 import android.app.AlertDialog
 import android.provider.Settings
@@ -32,6 +34,7 @@ import android.util.Log
 class ProfileFragment : Fragment() {
     private var _binding: FragmentProfileBinding? = null
     private val binding get() = _binding!!
+    private val roomRepository = RoomRepository()
     private val requestPermissionLauncher =
         registerForActivityResult(ActivityResultContracts.RequestPermission()) { isGranted ->
             Log.d("ProfileFragment", "Permission result: $isGranted")
@@ -62,19 +65,8 @@ class ProfileFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         loadUserProfile()
-
-        binding.editProfileImage.setOnClickListener {
-            val permission = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
-                android.Manifest.permission.READ_MEDIA_IMAGES
-            } else {
-                android.Manifest.permission.READ_EXTERNAL_STORAGE
-            }
-            if (ContextCompat.checkSelfPermission(requireContext(), permission) == PackageManager.PERMISSION_GRANTED) {
-                openImagePicker()
-            } else {
-                requestStoragePermission()
-            }
-        }
+        loadUserStats()
+        setupPreferences()
 
         binding.adminButton.setOnClickListener {
             val intent = Intent(requireActivity(), AdminLogin::class.java)
@@ -86,24 +78,135 @@ class ProfileFragment : Fragment() {
             val intent = Intent(requireActivity(), Login::class.java)
             startActivity(intent)
         }
+
+        binding.editProfileButton.setOnClickListener {
+            Toast.makeText(requireContext(), "Edit profile feature coming soon!", Toast.LENGTH_SHORT).show()
+        }
     }
 
     private fun loadUserProfile() {
         val prefs = requireContext().getSharedPreferences("auth", Context.MODE_PRIVATE)
         val userJson = prefs.getString("user", null)
-        if (userJson != null) {
-            val user = JSONObject(userJson)
-            binding.userName.text = user.optString("name", "-")
-            binding.userEmail.text = user.optString("email", "-")
-            binding.userPhone.text = user.optString("phone", "-")
-            binding.userLocation.text = user.optString("role", "-")
+        val token = prefs.getString("jwt", null)
+        
+        Log.d("ProfileFragment", "👤 Loading user profile - Token exists: ${token != null}")
+        
+        if (userJson != null && token != null) {
+            try {
+                val user = JSONObject(userJson)
+                val role = user.optString("role", "user").lowercase()
+                
+                Log.d("ProfileFragment", "👤 User role: $role")
+                
+                // Show user details based on role
+                val userName = user.optString("name", "Unknown User")
+                binding.userName.text = "Welcome, $userName!"
+                binding.userEmail.text = "Email: ${user.optString("email", "No email")}"
+                binding.userPhone.text = "Phone: ${user.optString("phone", "No phone")}"
+                binding.bookingInfo.text = "Bookings by $userName"
+                
+                // Display role appropriately
+                when (role) {
+                    "admin" -> {
+                        binding.userLocation.text = "Role: Administrator"
+                        binding.userLocation.setTextColor(requireContext().getColor(android.R.color.holo_red_dark))
+                        Log.d("ProfileFragment", "👤 Admin user detected - showing admin details")
+                    }
+                    "user" -> {
+                        binding.userLocation.text = "Role: Regular User"
+                        binding.userLocation.setTextColor(requireContext().getColor(android.R.color.holo_blue_dark))
+                        Log.d("ProfileFragment", "👤 Regular user detected - showing user details")
+                    }
+                    else -> {
+                        binding.userLocation.text = "Role: User ($role)"
+                        binding.userLocation.setTextColor(requireContext().getColor(android.R.color.darker_gray))
+                    }
+                }
+                
+                Log.d("ProfileFragment", "👤 Profile loaded: ${user.optString("name")} (${user.optString("email")})")
+                
+            } catch (e: Exception) {
+                Log.e("ProfileFragment", "👤 Error parsing user data: ${e.message}")
+                // If JSON parsing fails, show default values
+                binding.userName.text = "Welcome, User!"
+                binding.userEmail.text = "Email: No email"
+                binding.userPhone.text = "Phone: No phone"
+                binding.userLocation.text = "Role: User"
+                binding.bookingInfo.text = "Bookings by User"
+            }
         } else {
-            binding.userName.text = "-"
-            binding.userEmail.text = "-"
-            binding.userPhone.text = "-"
-            binding.userLocation.text = "-"
+            Log.w("ProfileFragment", "👤 No user data or token found")
+            binding.userName.text = "Welcome, Guest!"
+            binding.userEmail.text = "Email: Please login"
+            binding.userPhone.text = "Phone: No phone"
+            binding.userLocation.text = "Role: Guest"
+            binding.bookingInfo.text = "Bookings by Guest"
         }
         binding.profileImage.setImageResource(R.drawable.ic_user)
+    }
+
+    private fun loadUserStats() {
+        val prefs = requireContext().getSharedPreferences("auth", Context.MODE_PRIVATE)
+        val token = prefs.getString("jwt", null)
+        
+        if (token != null) {
+            lifecycleScope.launch {
+                try {
+                    val userBookings = roomRepository.getUserBookings(token)
+                    val rooms = roomRepository.getRooms()
+                    val roomMap = rooms?.associateBy { it.id } ?: emptyMap()
+                    
+                    var totalSpent = 0.0
+                    userBookings.forEach { booking ->
+                        val room = roomMap[booking.roomId]
+                        if (room != null) {
+                            totalSpent += room.price
+                        }
+                    }
+                    
+                    if (isAdded && view != null) {
+                        binding.totalBookings.text = userBookings.size.toString()
+                        binding.totalSpent.text = "KSh ${String.format("%.0f", totalSpent)}"
+                    }
+                } catch (e: Exception) {
+                    Log.e("ProfileFragment", "Error loading user stats: ${e.message}")
+                    if (isAdded && view != null) {
+                        binding.totalBookings.text = "0"
+                        binding.totalSpent.text = "KSh 0"
+                    }
+                }
+            }
+        } else {
+            binding.totalBookings.text = "0"
+            binding.totalSpent.text = "KSh 0"
+        }
+    }
+
+    private fun setupPreferences() {
+        val prefs = requireContext().getSharedPreferences("user_preferences", Context.MODE_PRIVATE)
+        
+        // Load notification preference
+        val notificationsEnabled = prefs.getBoolean("notifications_enabled", true)
+        binding.notificationSwitch.isChecked = notificationsEnabled
+        
+        // Load dark mode preference
+        val darkModeEnabled = prefs.getBoolean("dark_mode_enabled", false)
+        binding.darkModeSwitch.isChecked = darkModeEnabled
+        
+        // Setup listeners
+        binding.notificationSwitch.setOnCheckedChangeListener { _, isChecked ->
+            prefs.edit().putBoolean("notifications_enabled", isChecked).apply()
+            Toast.makeText(requireContext(), 
+                if (isChecked) "Notifications enabled" else "Notifications disabled", 
+                Toast.LENGTH_SHORT).show()
+        }
+        
+        binding.darkModeSwitch.setOnCheckedChangeListener { _, isChecked ->
+            prefs.edit().putBoolean("dark_mode_enabled", isChecked).apply()
+            Toast.makeText(requireContext(), 
+                if (isChecked) "Dark mode enabled - Restart app to apply" else "Dark mode disabled - Restart app to apply", 
+                Toast.LENGTH_LONG).show()
+        }
     }
 
     private fun requestStoragePermission() {

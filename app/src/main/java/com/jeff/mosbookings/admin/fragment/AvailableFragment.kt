@@ -17,8 +17,8 @@ import com.jeff.mosbookings.models.RoomData
 import com.jeff.mosbookings.repository.RoomRepository
 import com.jeff.mosbookings.screens.RoomDetails
 import kotlinx.coroutines.launch
-import java.time.LocalDate
-import java.time.format.DateTimeFormatter
+import java.text.SimpleDateFormat
+import java.util.*
 
 class AvailableFragment : Fragment() {
 
@@ -44,7 +44,7 @@ class AvailableFragment : Fragment() {
         binding.loadingProgressBar.visibility = View.VISIBLE
         lifecycleScope.launch {
             val rooms = roomRepository.getRooms()
-            val today = LocalDate.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd"))
+            val today = SimpleDateFormat("yyyy-MM-dd", Locale.getDefault()).format(Date())
             if (rooms != null) {
                 roomList.clear()
                 roomList.addAll(rooms.filter { !it.unavailableDates.contains(today) })
@@ -80,7 +80,7 @@ class AvailableFragment : Fragment() {
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) = Unit
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
                 val query = s.toString().lowercase()
-                val today = LocalDate.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd"))
+                val today = SimpleDateFormat("yyyy-MM-dd", Locale.getDefault()).format(Date())
                 val filtered = roomList.filter {
                     !it.unavailableDates.contains(today) && (
                         it.roomName.lowercase().contains(query) ||

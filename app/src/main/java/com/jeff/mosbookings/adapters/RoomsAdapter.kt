@@ -19,12 +19,16 @@ class RoomsAdapter(
         RecyclerView.ViewHolder(binding.root) {
         fun bind(room: RoomData) {
             binding.apply {
-                // Load first image
+                // Load first image with optimizations
                 val imageUrl = room.images.firstOrNull()?.takeIf { it.isNotBlank() }
                 Glide.with(roomImage.context)
                     .load(imageUrl)
                     .placeholder(R.drawable.placeholder_room)
                     .error(R.drawable.placeholder_room)
+                    .centerCrop()
+                    .override(400, 300) // Resize for better performance
+                    .thumbnail(0.1f) // Show thumbnail while loading
+                    .diskCacheStrategy(com.bumptech.glide.load.engine.DiskCacheStrategy.ALL)
                     .into(roomImage)
 
                 roomTitle.text = room.roomName
