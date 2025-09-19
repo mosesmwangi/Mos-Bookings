@@ -1,13 +1,19 @@
 package com.jeff.mosbookings.fragments
 
+import android.Manifest
 import android.content.Context
+import android.content.pm.PackageManager
 import android.graphics.Color
+import android.os.Build
 import android.os.Bundle
+import android.os.Environment
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.core.app.ActivityCompat
+import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -24,10 +30,24 @@ import com.jeff.mosbookings.databinding.FragmentReportsBinding
 import com.jeff.mosbookings.models.BookingData
 import com.jeff.mosbookings.models.RoomData
 import com.jeff.mosbookings.repository.RoomRepository
+import com.jeff.mosbookings.dialogs.AIAssistantDialog
 import kotlinx.coroutines.launch
 import org.json.JSONObject
+import java.io.File
+import java.io.FileOutputStream
 import java.text.SimpleDateFormat
 import java.util.*
+import com.itextpdf.kernel.pdf.PdfDocument
+import com.itextpdf.kernel.pdf.PdfWriter
+import com.itextpdf.layout.Document
+import com.itextpdf.layout.element.Paragraph
+import com.itextpdf.layout.element.Table
+import com.itextpdf.layout.element.Cell
+import com.itextpdf.layout.properties.TextAlignment
+import com.itextpdf.layout.properties.UnitValue
+import com.itextpdf.kernel.colors.ColorConstants
+import com.itextpdf.layout.element.Div
+import com.itextpdf.layout.properties.HorizontalAlignment
 
 class ReportsFragment : Fragment() {
     private lateinit var binding: FragmentReportsBinding
@@ -36,14 +56,17 @@ class ReportsFragment : Fragment() {
     private var allBookings: List<BookingData> = emptyList()
     private var allRoomMap: Map<String, RoomData> = emptyMap()
     private val TAG = "ReportsFragment"
+    private val STORAGE_PERMISSION_CODE = 1001
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
         binding = FragmentReportsBinding.inflate(inflater, container, false)
+        Log.d(TAG, "📊 ReportsFragment - onCreateView called")
         setupRecyclerView()
         loadReports()
+        setupFabClickListener()
         return binding.root
     }
 
@@ -56,10 +79,13 @@ class ReportsFragment : Fragment() {
     }
 
     private fun loadReports() {
+        Log.d(TAG, "📊 Loading reports...")
         binding.loadingProgressBar.visibility = View.VISIBLE
         
         val prefs = requireContext().getSharedPreferences("auth", android.content.Context.MODE_PRIVATE)
         val token = prefs.getString("jwt", null)
+        
+        Log.d(TAG, "📊 Token exists: ${token != null}")
         
         if (token == null) {
             binding.loadingProgressBar.visibility = View.GONE
@@ -77,9 +103,17 @@ class ReportsFragment : Fragment() {
                 allRoomMap = roomMap
                 
                 if (isAdded && view != null) {
+                    Log.d(TAG, "📊 Data loaded successfully - Bookings: ${bookings.size}, Rooms: ${rooms?.size ?: 0}")
                     val reportData = generateReportData(bookings)
-                    reportsAdapter.updateReports(reportData)
-                    setupCharts() // Setup charts with real data
+                    Log.d(TAG, "📊 Generated ${reportData.size} report items")
+                    
+                    if (reportData.isNotEmpty()) {
+                        reportsAdapter.updateReports(reportData)
+                        setupCharts() // Setup charts with real data
+                        showContent()
+                    } else {
+                        showEmptyState("No Data Available", "There's no booking data to generate reports yet.")
+                    }
                     binding.loadingProgressBar.visibility = View.GONE
                 }
             } catch (e: Exception) {
@@ -379,6 +413,221 @@ class ReportsFragment : Fragment() {
         lineChart.legend.isEnabled = false
         lineChart.animateY(1000)
         lineChart.invalidate()
+    }
+
+    private fun setupFabClickListener() {
+        // PDF Export FAB (Left)
+        binding.fabExportPdf.setOnClickListener {
+            checkStoragePermissionAndExportPdf()
+        }
+        
+        // More Actions FAB (Right) - AI Assistant
+        binding.fabMoreActions.setOnClickListener {
+            showAIAssistant()
+        }
+    }
+    
+    private fun showAIAssistant() {
+        val aiDialog = AIAssistantDialog()
+        aiDialog.show(parentFragmentManager, "AIAssistantDialog")
+    }
+    
+
+    private fun checkStoragePermissionAndExportPdf() {
+        val permission = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+            Manifest.permission.READ_MEDIA_IMAGES
+        } else {
+            Manifest.permission.WRITE_EXTERNAL_STORAGE
+        }
+
+        if (ContextCompat.checkSelfPermission(requireContext(), permission) == PackageManager.PERMISSION_GRANTED) {
+            exportReportToPdf()
+        } else {
+            ActivityCompat.requestPermissions(requireActivity(), arrayOf(permission), STORAGE_PERMISSION_CODE)
+        }
+    }
+
+    override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<out String>, grantResults: IntArray) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults)
+        if (requestCode == STORAGE_PERMISSION_CODE) {
+            if (grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                exportReportToPdf()
+            } else {
+                Toast.makeText(requireContext(), "Storage permission denied. Cannot export PDF.", Toast.LENGTH_SHORT).show()
+            }
+        }
+    }
+
+    private fun exportReportToPdf() {
+        lifecycleScope.launch {
+            try {
+                binding.loadingProgressBar.visibility = View.VISIBLE
+                
+                val reportData = generateReportData(allBookings)
+                val fileName = "MosBookings_Report_${SimpleDateFormat("yyyyMMdd_HHmmss", Locale.getDefault()).format(Date())}.pdf"
+                val file = File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS), fileName)
+                
+                val pdfWriter = PdfWriter(FileOutputStream(file))
+                val pdfDocument = PdfDocument(pdfWriter)
+                val document = Document(pdfDocument)
+                
+                // Add title
+                val title = Paragraph("MosBookings - Reports & Analytics")
+                    .setTextAlignment(TextAlignment.CENTER)
+                    .setFontSize(20f)
+                    .setBold()
+                    .setMarginBottom(20f)
+                document.add(title)
+                
+                // Add generation date
+                val date = Paragraph("Generated on: ${SimpleDateFormat("dd/MM/yyyy HH:mm", Locale.getDefault()).format(Date())}")
+                    .setTextAlignment(TextAlignment.CENTER)
+                    .setFontSize(12f)
+                    .setMarginBottom(30f)
+                document.add(date)
+                
+                // Add user info
+                val currentUser = getCurrentUserInfo()
+                if (currentUser.isNotEmpty()) {
+                    val userInfo = Paragraph("Report for: $currentUser")
+                        .setFontSize(14f)
+                        .setMarginBottom(20f)
+                    document.add(userInfo)
+                }
+                
+                // Add summary statistics
+                val summaryTitle = Paragraph("Summary Statistics")
+                    .setFontSize(16f)
+                    .setBold()
+                    .setMarginBottom(15f)
+                document.add(summaryTitle)
+                
+                // Create summary table
+                val summaryTable = Table(UnitValue.createPercentArray(floatArrayOf(60f, 40f)))
+                    .setWidth(UnitValue.createPercentValue(100f))
+                    .setMarginBottom(20f)
+                
+                // Add table headers
+                summaryTable.addHeaderCell(Cell().add(Paragraph("Metric").setBold()))
+                summaryTable.addHeaderCell(Cell().add(Paragraph("Value").setBold()))
+                
+                // Add summary data
+                val summaryItems = listOf(
+                    "Total System Bookings" to allBookings.size.toString(),
+                    "Your Total Bookings" to allBookings.filter { it.user == getCurrentUserId() }.size.toString(),
+                    "System This Month" to allBookings.count { it.date.startsWith(SimpleDateFormat("yyyy-MM", Locale.getDefault()).format(Date())) }.toString(),
+                    "Your This Month" to allBookings.filter { it.user == getCurrentUserId() }.count { it.date.startsWith(SimpleDateFormat("yyyy-MM", Locale.getDefault()).format(Date())) }.toString()
+                )
+                
+                summaryItems.forEach { (metric, value) ->
+                    summaryTable.addCell(Cell().add(Paragraph(metric)))
+                    summaryTable.addCell(Cell().add(Paragraph(value)))
+                }
+                
+                document.add(summaryTable)
+                
+                // Add detailed reports
+                val detailsTitle = Paragraph("Detailed Reports")
+                    .setFontSize(16f)
+                    .setBold()
+                    .setMarginBottom(15f)
+                document.add(detailsTitle)
+                
+                // Create detailed reports table
+                val detailsTable = Table(UnitValue.createPercentArray(floatArrayOf(50f, 50f)))
+                    .setWidth(UnitValue.createPercentValue(100f))
+                    .setMarginBottom(20f)
+                
+                // Add table headers
+                detailsTable.addHeaderCell(Cell().add(Paragraph("Report Item").setBold()))
+                detailsTable.addHeaderCell(Cell().add(Paragraph("Value").setBold()))
+                
+                // Add report data
+                reportData.forEach { item ->
+                    detailsTable.addCell(Cell().add(Paragraph(item.title)))
+                    detailsTable.addCell(Cell().add(Paragraph(item.value)))
+                }
+                
+                document.add(detailsTable)
+                
+                // Add room type distribution
+                if (allBookings.isNotEmpty()) {
+                    val roomTypeTitle = Paragraph("Room Type Distribution")
+                        .setFontSize(16f)
+                        .setBold()
+                        .setMarginBottom(15f)
+                    document.add(roomTypeTitle)
+                    
+                    val roomTypeCounts = allBookings.groupingBy { booking ->
+                        val room = allRoomMap[booking.roomId]
+                        room?.roomType ?: booking.roomName
+                    }.eachCount()
+                    
+                    val roomTypeTable = Table(UnitValue.createPercentArray(floatArrayOf(60f, 40f)))
+                        .setWidth(UnitValue.createPercentValue(100f))
+                        .setMarginBottom(20f)
+                    
+                    roomTypeTable.addHeaderCell(Cell().add(Paragraph("Room Type").setBold()))
+                    roomTypeTable.addHeaderCell(Cell().add(Paragraph("Bookings").setBold()))
+                    
+                    roomTypeCounts.forEach { (roomType, count) ->
+                        roomTypeTable.addCell(Cell().add(Paragraph(roomType)))
+                        roomTypeTable.addCell(Cell().add(Paragraph(count.toString())))
+                    }
+                    
+                    document.add(roomTypeTable)
+                }
+                
+                // Add footer
+                val footer = Paragraph("This report was generated by MosBookings App")
+                    .setTextAlignment(TextAlignment.CENTER)
+                    .setFontSize(10f)
+                    .setMarginTop(30f)
+                document.add(footer)
+                
+                document.close()
+                
+                if (isAdded && view != null) {
+                    binding.loadingProgressBar.visibility = View.GONE
+                    Toast.makeText(requireContext(), "Report exported successfully to Downloads folder: $fileName", Toast.LENGTH_LONG).show()
+                }
+                
+            } catch (e: Exception) {
+                Log.e(TAG, "Error exporting PDF: ${e.message}")
+                if (isAdded && view != null) {
+                    binding.loadingProgressBar.visibility = View.GONE
+                    Toast.makeText(requireContext(), "Error exporting PDF: ${e.message}", Toast.LENGTH_SHORT).show()
+                }
+            }
+        }
+    }
+
+    private fun showContent() {
+        binding.reportsRecyclerView.visibility = View.VISIBLE
+        val emptyState = binding.root.findViewById<View>(R.id.emptyState)
+        emptyState.visibility = View.GONE
+    }
+
+    private fun showEmptyState(title: String, message: String) {
+        binding.reportsRecyclerView.visibility = View.GONE
+        val emptyState = binding.root.findViewById<View>(R.id.emptyState)
+        emptyState.visibility = View.VISIBLE
+        
+        // Get references to empty state views
+        val emptyStateTitle = binding.root.findViewById<android.widget.TextView>(R.id.emptyStateTitle)
+        val emptyStateMessage = binding.root.findViewById<android.widget.TextView>(R.id.emptyStateMessage)
+        val emptyStateAction = binding.root.findViewById<android.widget.Button>(R.id.emptyStateAction)
+        
+        // Update empty state text
+        emptyStateTitle.text = title
+        emptyStateMessage.text = message
+        emptyStateAction.text = "Refresh"
+        emptyStateAction.visibility = View.VISIBLE
+        
+        // Set refresh action
+        emptyStateAction.setOnClickListener {
+            loadReports()
+        }
     }
 
     data class ReportItem(

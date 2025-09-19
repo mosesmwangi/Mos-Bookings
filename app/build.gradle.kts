@@ -98,4 +98,11 @@ dependencies {
     implementation("androidx.room:room-paging:$room_version")
     // (Assume these are commented out or deleted)
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.6.2")
+    
+    // PDF Generation
+    implementation("com.itextpdf:itext7-core:7.2.5")
+    implementation("com.itextpdf:kernel:7.2.5")
+    implementation("com.itextpdf:io:7.2.5")
+    implementation("com.itextpdf:layout:7.2.5")
+    implementation("com.itextpdf:forms:7.2.5")
 }

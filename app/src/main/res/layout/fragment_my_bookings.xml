@@ -16,50 +16,64 @@
         <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
             app:cardCornerRadius="0dp"
-            app:cardElevation="4dp"
-            android:layout_height="80dp">
+            app:cardElevation="6dp"
+            android:layout_height="120dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:background="@drawable/header_gradient"
                 android:orientation="horizontal"
                 android:gravity="center_vertical"
-                android:padding="8dp">
+                android:padding="16dp">
 
                 <de.hdodenhof.circleimageview.CircleImageView
-                    android:id="@+id/profile"
-                    android:layout_width="60dp"
-                    android:layout_height="60dp"
+                    android:id="@+id/profileImage"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
                     android:padding="8dp"
                     android:layout_marginStart="8dp"
-                    android:src="@drawable/hotel"
-                    app:civ_border_width="2dp"
-                    app:civ_border_color="#0C57A6" />
+                    android:src="@drawable/ic_user"
+                    app:civ_border_width="3dp"
+                    app:civ_border_color="@color/white" />
 
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_weight="1"
                     android:orientation="vertical"
-                    android:layout_marginStart="12dp"
+                    android:layout_marginStart="16dp"
                     android:layout_marginEnd="8dp"
                     android:layout_height="wrap_content">
 
                     <TextView
+                        android:id="@+id/userName"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Moses"
-                        android:textSize="20sp"
-                        android:textStyle="bold" />
+                        android:text="User"
+                        android:textSize="22sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/white" />
 
-                    <!--                <TextView-->
-                    <!--                    android:layout_width="wrap_content"-->
-                    <!--                    android:layout_height="wrap_content"-->
-                    <!--                    android:text="Field Agent 1"-->
-                    <!--                    android:textSize="16sp" />-->
+                    <TextView
+                        android:id="@+id/userEmail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="No email"
+                        android:textSize="14sp"
+                        android:textColor="@color/white"
+                        android:alpha="0.9" />
+
+                    <TextView
+                        android:id="@+id/userRole"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="User"
+                        android:textSize="12sp"
+                        android:textColor="@color/white"
+                        android:alpha="0.8"
+                        android:layout_marginTop="2dp" />
 
                 </LinearLayout>
-
-
 
             </LinearLayout>
 
@@ -230,6 +244,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             tools:listitem="@layout/room_item" />
+
+        <!-- Empty State -->
+        <include
+            android:id="@+id/emptyState"
+            layout="@layout/empty_state"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
 
     </LinearLayout>
 

@@ -10,6 +10,7 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.jeff.mosbookings.R
 import com.jeff.mosbookings.adapters.RoomsAdapter
 import com.jeff.mosbookings.databinding.FragmentHomeBinding
 import com.jeff.mosbookings.models.RoomData
@@ -42,14 +43,20 @@ class HomeFragment : Fragment() {
     private fun fetchRooms() {
         binding.loadingProgressBar.visibility = View.VISIBLE
         lifecycleScope.launch {
-            val rooms = roomRepository.getRooms()
-            if (rooms != null) {
-                roomList.clear()
-                roomList.addAll(rooms)
-                // Apply current filter when rooms are loaded
-                applyFilter(currentFilter)
-            } else {
-                Toast.makeText(requireContext(), "Failed to fetch rooms", Toast.LENGTH_SHORT).show()
+            try {
+                val rooms = roomRepository.getRooms()
+                if (rooms != null && rooms.isNotEmpty()) {
+                    roomList.clear()
+                    roomList.addAll(rooms)
+                    // Apply current filter when rooms are loaded
+                    applyFilter(currentFilter)
+                    showContent()
+                } else {
+                    showEmptyState("No Rooms Available", "There are no rooms available at the moment. Please check back later.")
+                }
+            } catch (e: Exception) {
+                Log.e("HomeFragment", "Error fetching rooms: ${e.message}")
+                showEmptyState("Error Loading Rooms", "Failed to load rooms. Please check your connection and try again.")
             }
             binding.loadingProgressBar.visibility = View.GONE
         }
@@ -242,6 +249,34 @@ class HomeFragment : Fragment() {
         // Show message if no rooms found
         if (filteredRoomList.isEmpty()) {
             Toast.makeText(requireContext(), "No rooms found for $filterType", Toast.LENGTH_SHORT).show()
+        }
+    }
+
+    private fun showContent() {
+        binding.roomsRecyclerView.visibility = View.VISIBLE
+        val emptyState = binding.root.findViewById<View>(R.id.emptyState)
+        emptyState.visibility = View.GONE
+    }
+
+    private fun showEmptyState(title: String, message: String) {
+        binding.roomsRecyclerView.visibility = View.GONE
+        val emptyState = binding.root.findViewById<View>(R.id.emptyState)
+        emptyState.visibility = View.VISIBLE
+        
+        // Get references to empty state views
+        val emptyStateTitle = binding.root.findViewById<android.widget.TextView>(R.id.emptyStateTitle)
+        val emptyStateMessage = binding.root.findViewById<android.widget.TextView>(R.id.emptyStateMessage)
+        val emptyStateAction = binding.root.findViewById<android.widget.Button>(R.id.emptyStateAction)
+        
+        // Update empty state text
+        emptyStateTitle.text = title
+        emptyStateMessage.text = message
+        emptyStateAction.text = "Refresh"
+        emptyStateAction.visibility = View.VISIBLE
+        
+        // Set refresh action
+        emptyStateAction.setOnClickListener {
+            fetchRooms()
         }
     }
 }

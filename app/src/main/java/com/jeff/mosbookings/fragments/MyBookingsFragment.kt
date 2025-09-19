@@ -1,5 +1,6 @@
 package com.jeff.mosbookings.fragments
 
+import android.content.Context
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
@@ -22,6 +23,8 @@ import com.jeff.mosbookings.models.BookingData
 import com.jeff.mosbookings.models.RoomData
 import android.content.Intent
 import com.jeff.mosbookings.screens.RoomDetails
+import org.json.JSONObject
+import android.util.Log
 
 class MyBookingsFragment : Fragment() {
     private lateinit var binding: FragmentMyBookingsBinding
@@ -37,10 +40,58 @@ class MyBookingsFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         binding = FragmentMyBookingsBinding.inflate(inflater, container, false)
+        loadUserProfile()
         setupRecyclerView()
         setupSearch()
         setupFilters()
         return binding.root
+    }
+
+    private fun loadUserProfile() {
+        val prefs = requireContext().getSharedPreferences("auth", Context.MODE_PRIVATE)
+        val userJson = prefs.getString("user", null)
+        val token = prefs.getString("jwt", null)
+        
+        Log.d("MyBookingsFragment", "👤 Loading user profile - Token exists: ${token != null}")
+        
+        if (userJson != null && token != null) {
+            try {
+                val user = JSONObject(userJson)
+                val userName = user.optString("name", "User")
+                val userEmail = user.optString("email", "No email")
+                val role = user.optString("role", "user").lowercase()
+                
+                Log.d("MyBookingsFragment", "👤 User: $userName, Role: $role")
+                
+                // Update the profile section with user data
+                binding.userName.text = userName
+                binding.userEmail.text = userEmail
+                binding.userRole.text = when (role) {
+                    "admin" -> "Administrator"
+                    "user" -> "Regular User"
+                    else -> "User ($role)"
+                }
+                
+                // Set profile image
+                binding.profileImage.setImageResource(R.drawable.ic_user)
+                
+                Log.d("MyBookingsFragment", "👤 Profile loaded: $userName ($userEmail)")
+                
+            } catch (e: Exception) {
+                Log.e("MyBookingsFragment", "👤 Error parsing user data: ${e.message}")
+                // Fallback to default values
+                binding.userName.text = "User"
+                binding.userEmail.text = "No email"
+                binding.userRole.text = "User"
+                binding.profileImage.setImageResource(R.drawable.ic_user)
+            }
+        } else {
+            Log.w("MyBookingsFragment", "👤 No user data or token found")
+            binding.userName.text = "Guest"
+            binding.userEmail.text = "Please login"
+            binding.userRole.text = "Guest"
+            binding.profileImage.setImageResource(R.drawable.ic_user)
+        }
     }
 
     private fun setupRecyclerView() {
@@ -67,9 +118,14 @@ class MyBookingsFragment : Fragment() {
                 
                 if (isAdded && view != null) {
                     applyFilter(currentFilter)
-                    bookingsAdapter = BookingsAdapter(filteredBookings, roomMap, token, roomRepository)
-                    binding.roomsRecyclerView.layoutManager = LinearLayoutManager(requireContext())
-                    binding.roomsRecyclerView.adapter = bookingsAdapter
+                    if (filteredBookings.isNotEmpty()) {
+                        bookingsAdapter = BookingsAdapter(filteredBookings, roomMap, token, roomRepository)
+                        binding.roomsRecyclerView.layoutManager = LinearLayoutManager(requireContext())
+                        binding.roomsRecyclerView.adapter = bookingsAdapter
+                        showContent()
+                    } else {
+                        showEmptyState("No Bookings Found", "You haven't made any bookings yet. Start exploring our rooms!")
+                    }
                     binding.loadingProgressBar.visibility = View.GONE
                 }
             } catch (e: Exception) {
@@ -297,6 +353,34 @@ class MyBookingsFragment : Fragment() {
         // Update adapter with filtered bookings
         if (::bookingsAdapter.isInitialized) {
             bookingsAdapter.updateBookings(filteredBookings, allRoomMap)
+        }
+    }
+
+    private fun showContent() {
+        binding.roomsRecyclerView.visibility = View.VISIBLE
+        val emptyState = binding.root.findViewById<View>(R.id.emptyState)
+        emptyState.visibility = View.GONE
+    }
+
+    private fun showEmptyState(title: String, message: String) {
+        binding.roomsRecyclerView.visibility = View.GONE
+        val emptyState = binding.root.findViewById<View>(R.id.emptyState)
+        emptyState.visibility = View.VISIBLE
+        
+        // Get references to empty state views
+        val emptyStateTitle = binding.root.findViewById<android.widget.TextView>(R.id.emptyStateTitle)
+        val emptyStateMessage = binding.root.findViewById<android.widget.TextView>(R.id.emptyStateMessage)
+        val emptyStateAction = binding.root.findViewById<android.widget.Button>(R.id.emptyStateAction)
+        
+        // Update empty state text
+        emptyStateTitle.text = title
+        emptyStateMessage.text = message
+        emptyStateAction.text = "Refresh"
+        emptyStateAction.visibility = View.VISIBLE
+        
+        // Set refresh action
+        emptyStateAction.setOnClickListener {
+            setupRecyclerView()
         }
     }
 }

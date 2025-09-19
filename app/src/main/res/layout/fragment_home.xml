@@ -293,6 +293,14 @@
                 android:paddingBottom="16dp"
                 tools:listitem="@layout/room_item" />
 
+            <!-- Empty State -->
+            <include
+                android:id="@+id/emptyState"
+                layout="@layout/empty_state"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone" />
+
         </LinearLayout>
 
     </LinearLayout>

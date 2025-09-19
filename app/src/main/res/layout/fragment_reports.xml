@@ -34,6 +34,8 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginTop="16dp"
+        android:layout_marginBottom="100dp"
+        android:fillViewport="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -42,7 +44,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:paddingBottom="100dp">
 
             <!-- Charts Section -->
             <TextView
@@ -163,8 +166,42 @@
                 android:layout_height="wrap_content"
                 tools:listitem="@layout/item_report_card" />
 
+            <!-- Empty State -->
+            <include
+                android:id="@+id/emptyState"
+                layout="@layout/empty_state"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone" />
+
         </LinearLayout>
 
     </ScrollView>
+
+    <!-- Floating Action Button for PDF Export (Left) -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabExportPdf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:src="@drawable/ic_download"
+        android:contentDescription="Export Report as PDF"
+        app:backgroundTint="@color/primary_blue"
+        app:tint="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- Floating Action Button for More Actions (Right) -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabMoreActions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:src="@drawable/ic_ai_assistant"
+        android:contentDescription="More Actions"
+        app:backgroundTint="@color/primary_blue_light"
+        app:tint="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
